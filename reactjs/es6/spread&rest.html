@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Try ES6</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.7.7/babel.js"></script>
+</head>
+<body>
+	<div id="example"></div>
+	<script type="text/babel">
+
+	function double(...rest) {
+		return (
+			rest
+				.map(function(number) {
+					return 2 * number;
+				});
+		);
+	}
+
+	var array = [0, 1, 2, 3, 4];
+	var [zero, ...numbers] = array;
+
+
+	console.log(zero);
+	console.log(numbers);
+	console.log(double(...array), double.apply(null, array));
+
+	</script>
+	<script>
+	var input = document.querySelector('script[type="text/babel"]');
+	var output = Babel.transform(input.textContent, { presets: ['es2015'] }).code;
+	eval(output);
+	</script>
+</body>
+</html>

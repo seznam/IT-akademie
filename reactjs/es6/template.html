@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Try ES6</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.7.7/babel.js"></script>
+    </head>
+    <body>
+         <div id="example"></div>
+        <script type="text/babel">
+
+            function sum(...rest) {
+                return (
+                    rest
+                        .map((value) => 2 * value)
+                        .reduce((previousValue, currentValue) => { return previousValue + currentValue; }, 0)
+                );
+            }
+
+            var array = [0, 1, 2, 3, 4];
+            var [zero, ...numbers] = array;
+
+
+			var MultiLineText = `
+				Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+				Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam.
+				Nullam at arcu a est sollicitudin euismod.
+				Nam quis nulla. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est.
+			`;
+
+			console.log(MultiLineText);
+            console.log(`Sum is ${sum(...array)}.`);
+
+
+        </script>
+        <script>
+            var input = document.querySelector('script[type="text/babel"]');
+            var output = Babel.transform(input.textContent, { presets: ['es2015'] }).code;
+            eval(output);
+        </script>
+    </body>
+</html>

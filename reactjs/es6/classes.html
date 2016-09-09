@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Try ES6</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.7.7/babel.js"></script>
+    </head>
+    <body>
+         <div id="log"></div>
+        <script type="text/babel">
+
+            class Vehicle {
+
+                constructor(wheels) {
+                    this._wheels = wheels;
+                }
+
+                getWheels() {
+                    return this._wheels;
+                }
+            }
+
+            class Car extends Vehicle {
+
+                constructor() {
+                    super(4);
+                }
+
+                static getName() {
+                    return 'car';
+                }
+            }
+
+            let car = new Car();
+
+            console.log(car.getWheels());
+            console.log(Car.getName());
+
+        </script>
+        <script>
+            var input = document.querySelector('script[type="text/babel"]');
+            var output = Babel.transform(input.textContent, { presets: ['es2015'] }).code;
+            eval(output);
+        </script>
+    </body>
+</html>

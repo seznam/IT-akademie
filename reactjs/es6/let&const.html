@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Try ES6</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.7.7/babel.js"></script>
+    </head>
+    <body>
+         <div id="example"></div>
+        <script type="text/babel">
+
+            let x = 1;
+
+            function todo() {
+                console.log('print2', x);
+
+                let x = 2;
+
+                console.log('print3', x);
+
+                if (true) {
+                    let x = 3;
+                    let y = 3;
+
+                    console.log('print4', x, y);
+                }
+
+                console.log('print5', x, y);
+            }
+
+            console.log('print1', x);
+            todo();
+
+        </script>
+        <script>
+            var input = document.querySelector('script[type="text/babel"]');
+            var output = Babel.transform(input.textContent, { presets: ['es2015'] }).code;
+            eval(output);
+        </script>
+    </body>
+</html>
