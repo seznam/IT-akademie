@@ -5,6 +5,7 @@ require('babel-core/register.js')({
 let gulp = require('gulp');
 let gutil = require('gulp-util');
 let babel = require('gulp-babel');
+let jasmine = require('gulp-jasmine');
 let karma = require('karma');
 let path = require('path');
 let browserify = require('browserify');
@@ -35,8 +36,14 @@ function startKarmaServer(done, singleRun) {
 	}, done).start();
 }
 
+//run test
+gulp.task('test:jasmine', () =>
+	gulp.src('./src/**/*Spec.js')
+		.pipe(jasmine({ includeStackTrace: false }))
+);
+
 gulp.task('bundle', function() {
-	var options = { debug: false, insertGlobals : false };
+	var options = { debug: true, insertGlobals : false, paths: ['./', './src'], extensions: ['.jsx'] };
 
 	return (
 		browserify(['./src/main.js'], options)
@@ -57,7 +64,7 @@ gulp.task('bundle', function() {
 
 gulp.task('less', function() {
 	return (
-		gulp.src('./src/**/*.less')
+		gulp.src('./src/main.less')
 			.pipe(less({
 				paths: [path.join(__dirname, 'less', 'includes')]
 			}))
@@ -73,7 +80,7 @@ gulp.task('html', function() {
 	);
 });
 
-gulp.task('test', function(done) {
+gulp.task('test:karma', function(done) {
 	startKarmaServer(done, true);
 });
 
@@ -82,13 +89,20 @@ gulp.task('server', function() {
 	gulpConfig.server.start();
 });
 
+gulp.task('static', () => {
+	return gulp.src('./static/**/*')
+			.pipe(gulp.dest('./dist'));
+});
+
 // -------------------------------------PRIVATE HELPER TASKS
-gulp.task('dev', ['bundle', 'less', 'html', 'server'], (done) => {
-	startKarmaServer(done);
+gulp.task('dev', ['bundle', 'less', 'html', 'static', 'server'], (done) => {
+	//startKarmaServer(done);
 
 	runOnChange('./src/**/*.less', ['less']);
 	runOnChange('./src/**/*.html', ['html']);
-	runOnChange(['./src/**/*.{js,jsx}'], ['bundle']);
+	runOnChange(['./src/**/!(*Spec).{js,jsx}'], ['bundle']);
+	runOnChange('./src/**/*.{js,jsx}', ['test:jasmine']);
+	runOnChange('./static/**/*', ['static']);
 	gulp.watch(['dist/**/*.js', 'dist/**/*.css', 'dist/**/*.html'], (file) => {
 		gulpConfig.server.notify.apply(gulpConfig.server, [file]);
 	});
