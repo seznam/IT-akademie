@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>ReactJS</title>
+        <script src="https://fb.me/react-15.1.0.js"></script>
+        <script src="https://fb.me/react-dom-15.1.0.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.7.7/babel.js"></script>
+    </head>
+    <body>
+         <div id="example"></div>
+        <script type="text/babel">
+            var customComponent = React.createClass({
+                render: () => {
+                    return <h1>My custom component</h1>;
+                }
+            });
+
+            ReactDOM.render(
+                React.createElement(customComponent, null, null),
+                document.getElementById('example')
+            );
+
+        </script>
+        <script>
+            var input = document.querySelector('script[type="text/babel"]');
+            var output = Babel.transform(input.textContent, { presets: ['es2015', 'react'] }).code;
+            eval(output);
+        </script>
+    </body>
+</html>

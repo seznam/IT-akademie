@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Mounting Lifecycle</title>
+	<script src="https://fb.me/react-15.1.0.js"></script>
+	<script src="https://fb.me/react-dom-15.1.0.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.7.7/babel.js"></script>
+</head>
+<body>
+	<div id="example"></div>
+	<button id='rerender'>rerender</button>
+	<script type="text/babel">
+		class Hello extends React.Component {
+
+			constructor(props) {
+				super(props);
+			}
+
+			componentWillMount() {
+				console.log('componentWillMount');
+			}
+
+			render() {
+				console.log('render');
+				return <h1>Hello, John</h1>
+			}
+
+			componentDidMount() {
+				console.log('componentDidMount');
+			}
+
+			componentWillUnmount() {
+				console.log('componentWillUnmount');
+			}
+		}
+
+		function render() {
+			ReactDOM.unmountComponentAtNode(document.getElementById('example'));
+
+			ReactDOM.render(
+				<Hello />,
+				document.getElementById('example')
+			);
+		}
+
+		render();
+
+		document.getElementById('rerender').addEventListener('click', (e) => {
+			render();
+		});
+
+	</script>
+	<script>
+		var input = document.querySelector('script[type="text/babel"]');
+		var output = Babel.transform(input.textContent, { presets: ['es2015', 'react'] }).code;
+		eval(output);
+	</script>
+</body>
+</html>

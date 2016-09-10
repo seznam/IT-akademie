@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Components</title>
+        <script src="https://fb.me/react-15.1.0.js"></script>
+        <script src="https://fb.me/react-dom-15.1.0.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.7.7/babel.js"></script>
+    </head>
+    <body>
+         <div id="example"></div>
+        <script type="text/babel">
+
+			class Hello extends React.Component {
+				render() {
+					return <h1>Hello, {this.props.name}</h1>
+				}
+			}
+
+			class Wellcome extends React.Component {
+
+				constructor(props) {
+					super(props);
+
+					this.state = {
+						name: props.name || ''
+					};
+				}
+
+				render() {
+					return (
+						<div>
+							<Hello name = {this.state.name} />
+							<input
+									type = 'text'
+									autoFocus = {true}
+									ref = 'name'
+									value = {this.state.name}
+									onChange = {(e) => this._handleChange(e)}/>
+						</div>
+					)
+
+				}
+
+				_handleChange(e) {
+					this.setState({ name: this.refs.name.value });
+				}
+			}
+
+            ReactDOM.render(
+                <Wellcome name = 'John'/>,
+                document.getElementById('example')
+            );
+
+        </script>
+        <script>
+            var input = document.querySelector('script[type="text/babel"]');
+            var output = Babel.transform(input.textContent, { presets: ['es2015', 'react'] }).code;
+            eval(output);
+        </script>
+    </body>
+</html>

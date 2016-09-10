@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Mounting Lifecycle</title>
+	<script src="https://fb.me/react-15.1.0.js"></script>
+	<script src="https://fb.me/react-dom-15.1.0.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.7.7/babel.js"></script>
+</head>
+<body>
+	<div id="example"></div>
+	<script type="text/babel">
+
+	class Hello extends React.Component {
+
+		constructor(props) {
+			super(props);
+
+			this.state = {};
+		}
+
+		componentWillReceiveProps(nextProps) {
+			// i can use method setState
+
+			console.log('componentWillReceiveProps', nextProps);
+		}
+
+		shouldComponentUpdate(nextProps, nextState) {
+			console.log('shouldComponentUpdate');
+
+			return true;
+		}
+
+		componentWillUpdate(nextProps, nextState) {
+			// i can not use method setState
+
+			console.log('componentWillUpdate');
+		}
+
+		render() {
+			console.log('render');
+			return (
+				<div>
+					<h1>
+						Hello, John
+					</h1>
+					<button onClick = { (e) => this._handleClick(e) }>Render</button>
+				</div>
+			)
+
+		}
+
+		componentDidUpdate() {
+			console.log('componentDidUpdate');
+		}
+
+		_handleClick(e) {
+			this.setState({});
+		}
+	}
+
+	ReactDOM.render(
+		<Hello />,
+		document.getElementById('example')
+	);
+
+	</script>
+	<script>
+		var input = document.querySelector('script[type="text/babel"]');
+		var output = Babel.transform(input.textContent, { presets: ['es2015', 'react'] }).code;
+		eval(output);
+	</script>
+</body>
+</html>
