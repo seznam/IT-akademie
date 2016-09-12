@@ -11,50 +11,50 @@
 	<div id="example"></div>
 	<button id='rerender'>rerender</button>
 	<script type="text/babel">
-		class Hello extends React.Component {
+	class Hello extends React.Component {
 
-			constructor(props) {
-				super(props);
-			}
-
-			componentWillMount() {
-				console.log('componentWillMount');
-			}
-
-			render() {
-				console.log('render');
-				return <h1>Hello, John</h1>
-			}
-
-			componentDidMount() {
-				console.log('componentDidMount');
-			}
-
-			componentWillUnmount() {
-				console.log('componentWillUnmount');
-			}
+		constructor(props) {
+			super(props);
 		}
 
-		function render() {
-			ReactDOM.unmountComponentAtNode(document.getElementById('example'));
-
-			ReactDOM.render(
-				<Hello />,
-				document.getElementById('example')
-			);
+		componentWillMount() {
+			console.log('componentWillMount');
 		}
 
+		render() {
+			console.log('render');
+			return <h1>Hello, John</h1>
+		}
+
+		componentDidMount() {
+			console.log('componentDidMount');
+		}
+
+		componentWillUnmount() {
+			console.log('componentWillUnmount');
+		}
+	}
+
+	function render() {
+		ReactDOM.unmountComponentAtNode(document.getElementById('example'));
+
+		ReactDOM.render(
+			<Hello />,
+			document.getElementById('example')
+		);
+	}
+
+	render();
+
+	document.getElementById('rerender').addEventListener('click', (e) => {
 		render();
-
-		document.getElementById('rerender').addEventListener('click', (e) => {
-			render();
-		});
+	});
 
 	</script>
 	<script>
-		var input = document.querySelector('script[type="text/babel"]');
-		var output = Babel.transform(input.textContent, { presets: ['es2015', 'react'] }).code;
-		eval(output);
+	var input = document.querySelector('script[type="text/babel"]');
+	var output = Babel.transform(input.textContent, { presets: ['es2015', 'react'] }).code;
+	eval(output);
 	</script>
 </body>
 </html>

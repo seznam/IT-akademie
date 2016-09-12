@@ -16,7 +16,9 @@
 		constructor(props) {
 			super(props);
 
-			this.state = {};
+			this.state = {
+				name: 'John'
+			};
 		}
 
 		componentWillReceiveProps(nextProps) {
@@ -41,10 +43,10 @@
 			console.log('render');
 			return (
 				<div>
-					<h1>
-						Hello, John
-					</h1>
-					<button onClick = { (e) => this._handleClick(e) }>Render</button>
+				<h1>
+				Hello, {this.state.name}
+				</h1>
+				<button onClick = { (e) => this._handleClick(e) }>Render</button>
 				</div>
 			)
 
@@ -55,7 +57,7 @@
 		}
 
 		_handleClick(e) {
-			this.setState({});
+			this.setState({ name: 'Jessica' });
 		}
 	}
 
@@ -66,9 +68,9 @@
 
 	</script>
 	<script>
-		var input = document.querySelector('script[type="text/babel"]');
-		var output = Babel.transform(input.textContent, { presets: ['es2015', 'react'] }).code;
-		eval(output);
+	var input = document.querySelector('script[type="text/babel"]');
+	var output = Babel.transform(input.textContent, { presets: ['es2015', 'react'] }).code;
+	eval(output);
 	</script>
 </body>
 </html>

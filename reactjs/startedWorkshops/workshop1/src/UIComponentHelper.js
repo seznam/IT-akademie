@@ -13,7 +13,7 @@ export default class UIComponentHelper {
 	 * @return {number} The percent of visibility.
 	 */
 	getPercentOfVisibility(elmRect) {
-		
+
 	}
 
 	/**
@@ -51,8 +51,8 @@ export default class UIComponentHelper {
 		let elmRectStyle = {
 			top: clientRect.top - extended,
 			left: clientRect.left - extended,
-			width: clientRect.width + extended,
-			height: (clientRect.height || height || 0 / width || 0 * clientRect.width) + extended
+			width: clientRect.width + 2 * extended,
+			height: (clientRect.height || height || 0 / width || 0 * clientRect.width) + 2 * extended
 		};
 
 		return elmRectStyle;
