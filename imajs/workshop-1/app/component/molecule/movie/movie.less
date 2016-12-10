@@ -1,0 +1,86 @@
+.mol-movie {
+	width: 100%;
+
+	&- {
+
+		&content {
+			width: 100%;
+		}
+
+		&title {
+			display: block;
+
+			margin: 16px 0;
+
+			color: #337ab7;
+			text-decoration: none;
+		}
+
+		&title-text {
+			margin: 0;
+
+			font-weight: normal;
+		}
+
+		&perex {
+			margin: 16px 0 0;
+		}
+
+		@media (min-width: 680px) {
+			&content::after {
+				display: block;
+
+				clear: both;
+
+				content: '';
+			}
+
+			&image {
+				display: block;
+
+				float: left;
+
+				width: 50%;
+				height: 100%;
+			}
+
+			&image-img {
+				width: 100%;
+				height: auto;
+				min-height: 1px;
+			}
+
+			&title,
+			&perex {
+				float: left;
+
+				box-sizing: border-box;
+				margin-top: 0;
+				border-left: 24px solid transparent;
+				width: 50%;
+			}
+		}
+
+		@media (min-width: 860px) {
+			&image {
+				width: 30%;
+			}
+
+			&title,
+			&perex {
+				width: 70%;
+			}
+		}
+	}
+}
+
+.ogm-movie-listing {
+	.mol-movie {
+		border-top: 1px solid #a0a0a0;
+		padding: 16px 0;
+
+		&:first-child {
+			border-top: none;
+		}
+	}
+}
