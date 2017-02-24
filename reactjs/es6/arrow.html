@@ -10,12 +10,7 @@
         <script type="text/babel">
 
 		function double(...rest) {
-			return (
-				rest
-					.map((number) => {
-						return 2 * number;
-					});
-			);
+			return rest.map(number => 2 * number);
 		}
 
             var array = [0, 1, 2, 3, 4];

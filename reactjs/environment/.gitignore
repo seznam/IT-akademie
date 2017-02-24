@@ -4,7 +4,4 @@
 .sublime-gulp.cache
 node_modules/
 npm-debug.log
-server/ima/
-doc/
 dist/
-build/
