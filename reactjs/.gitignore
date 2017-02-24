@@ -10,5 +10,3 @@ build/
 .tmp/es5transformedApp.js
 app/assets/bower
 app/assets/less/settings.less
-reactjs/environment/dist
-reactjs/environment/node_modules
