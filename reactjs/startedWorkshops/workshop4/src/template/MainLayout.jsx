@@ -32,8 +32,8 @@ export default class MainLayout extends React.Component {
 									type = 'search'
 									name = 'q'
 									placeholder = 'Vyhledávání…'/>
-							<button className = 'tpl-main-layout-search-button'>Hledat</button>
-							<button className = 'tpl-main-layout-search-button'>Vymazat</button>
+							<button className = 'tpl-main-layout-search-button' type = 'submit'>Hledat</button>
+							<button className = 'tpl-main-layout-search-button' type = 'reset'>Vymazat</button>
 						</form>
 					</div>
 				</header>
