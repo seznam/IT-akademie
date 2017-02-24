@@ -4,17 +4,17 @@ require('babel-core/register.js')({
 
 let gulp = require('gulp');
 let gutil = require('gulp-util');
-let babel = require('gulp-babel');
+//let babel = require('gulp-babel');
 let jasmine = require('gulp-jasmine');
-let karma = require('karma');
+//let karma = require('karma');
 let path = require('path');
 let browserify = require('browserify');
-let babelify = require('babelify');
+//let babelify = require('babelify');
 let fs = require('fs');
 let less = require('gulp-less');
 let concatCss = require('gulp-concat-css');
 let gls = require('gulp-live-server');
-let watch = require('gulp-watch');
+let gulpWatch = require('gulp-watch');
 
 let gulpConfig = {
 	onTerminate: () => {
@@ -29,27 +29,28 @@ let gulpConfig = {
 	server: null
 };
 
-function startKarmaServer(done, singleRun) {
-	new karma.Server({
-		configFile: path.resolve('./karma.conf.js'),
-		singleRun: singleRun
-	}, done).start();
-}
+// function startKarmaServer(done, singleRun) {
+// 	new karma.Server({
+// 		configFile: path.resolve('./karma.conf.js'),
+// 		singleRun: singleRun
+// 	}, done).start();
+// }
 
 //run test
-gulp.task('test:jasmine', () =>
-	gulp.src('./src/**/*Spec.js')
-		.pipe(jasmine({ includeStackTrace: false }))
-);
+function testJasmine() {
+	return gulp.src('./src/**/*Spec.js')
+		.pipe(jasmine({ includeStackTrace: false }));
+}
 
-gulp.task('bundle', function() {
+function bundle() {
 	var options = { debug: true, insertGlobals : false, paths: ['./', './src'], extensions: ['.jsx'] };
 
 	return (
 		browserify(['./src/main.js'], options)
-			.transform(babelify.configure({
+			.transform('babelify', {
+				babelrc: false,
 				presets: ['es2015', 'react']
-			}))
+			})
 			.bundle()
 			.on('error', function(err) {
 				gutil.log(
@@ -60,9 +61,9 @@ gulp.task('bundle', function() {
 			})
 			.pipe(fs.createWriteStream('./dist/js/bundle.js'))
 	);
-});
+}
 
-gulp.task('less', function() {
+function compileLess() {
 	return (
 		gulp.src('./src/main.less')
 			.pipe(less({
@@ -71,48 +72,48 @@ gulp.task('less', function() {
 			.pipe(concatCss('bundle.css'))
 			.pipe(gulp.dest('./dist/css/'))
 	);
-});
+}
 
-gulp.task('html', function() {
+function html() {
 	return (
 		gulp.src('./src/**/*.html')
 			.pipe(gulp.dest('./dist'))
 	);
-});
+}
 
-gulp.task('test:karma', function(done) {
-	startKarmaServer(done, true);
-});
-
-gulp.task('server', function() {
+function server() {
 	gulpConfig.server = gls.static('dist', 8888);
 	gulpConfig.server.start();
-});
+}
 
-gulp.task('static', () => {
+function staticFiles() {
 	return gulp.src('./static/**/*')
 			.pipe(gulp.dest('./dist'));
-});
+}
 
-// -------------------------------------PRIVATE HELPER TASKS
-gulp.task('dev', ['bundle', 'less', 'html', 'static', 'server'], (done) => {
-	//startKarmaServer(done);
-
-	runOnChange('./src/**/*.less', ['less']);
-	runOnChange('./src/**/*.html', ['html']);
-	runOnChange(['./src/**/!(*Spec).{js,jsx}'], ['bundle']);
-	runOnChange('./src/**/*.{js,jsx}', ['test:jasmine']);
-	runOnChange('./static/**/*', ['static']);
-	gulp.watch(['dist/**/*.js', 'dist/**/*.css', 'dist/**/*.html'], (file) => {
-		gulpConfig.server.notify.apply(gulpConfig.server, [file]);
-	});
-
-	function runOnChange(files, tasks) {
-		watch(files, () => {
-			gulp.start(tasks);
-		});
-	}
-});
+exports.dev = gulp.series(
+	bundle,
+	compileLess,
+	html,
+	staticFiles,
+	gulp.parallel(
+		server,
+		function watch() {
+			runOnChange('./src/**/*.less', compileLess);
+			runOnChange('./src/**/*.html', html);
+			runOnChange(['./src/**/!(*Spec).{js,jsx}'], bundle);
+			runOnChange('./src/**/*Spec.{js,jsx}', testJasmine);
+			runOnChange('./static/**/*', staticFiles);
+			gulp.watch(['dist/**/*.js', 'dist/**/*.css', 'dist/**/*.html'], function notifyServer(file) {
+				gulpConfig.server.notify.apply(gulpConfig.server, [file]);
+			});
+			
+			function runOnChange(files, task) {
+				gulpWatch(files, gulp.series(task));
+			}
+		}
+	)
+);
 
 if (gulpConfig.onTerminate) {
 	process.on('SIGINT', gulpConfig.onTerminate.bind(null, 'SIGINT'));

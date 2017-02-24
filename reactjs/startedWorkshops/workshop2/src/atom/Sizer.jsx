@@ -7,7 +7,16 @@ import { uiComponentHelper } from '../UIComponentHelper';
  * @class Sizer
  */
 export default function Sizer(props) {
-	
+	return (
+		<div
+				className = { uiComponentHelper.cssClasses({
+					'atm-sizer': true,
+					'atm-placeholder': props.placeholder
+				}, props.className)}
+				style = {{
+					paddingTop: props.height / props.width * 100 + '%'
+				}}/>
+	);
 }
 
 Sizer.propTypes = {
