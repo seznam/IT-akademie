@@ -12,8 +12,10 @@ export default function Sizer(props) {
 				className = { uiComponentHelper.cssClasses({
 					'atm-sizer': true,
 					'atm-placeholder': props.placeholder
-				}, props.className) }
-				style = { { paddingTop: props.height / props.width * 100 + '%' } }/>
+				}, props.className)}
+				style = {{
+					paddingTop: props.height / props.width * 100 + '%'
+				}}/>
 	);
 }
 
