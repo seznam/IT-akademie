@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Try ES6</title>
+    </head>
+    <body>
+        <script>
+            function httpRequest(message) {
+			  return new Promise(resolve => {
+			    setTimeout(() => {
+			      resolve({ status: 200, message });
+			    }, 4000);
+			  });
+			}
+
+			async function asyncCall() {
+			  console.log('async function start');
+			  const result1 = await httpRequest('Message 1');
+			  console.log(result1);
+			  const result2 = await httpRequest('Message 2');
+			  console.log(result2);
+			  console.log('async function end');
+			}
+
+			asyncCall();
+
+        </script>
+    </body>
+</html>

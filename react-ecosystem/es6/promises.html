@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Try ES6</title>
+</head>
+<body>
+	<div id="log"></div>
+	<script>
+
+	let promiseCount = 0;
+	let log = document.getElementById('log');
+
+	function testPromise() {
+		let thisPromiseCount = ++promiseCount;
+
+		log.insertAdjacentHTML('beforeend', `${thisPromiseCount}) Started (<small>Sync code started</small>)<br/>`);
+
+		getPromise(thisPromiseCount)
+			.then((value) => {
+				log.insertAdjacentHTML('beforeend', `${value}) Promise fulfilled (<small>Async code terminated</small>)<br/>`);
+			}, (value) => {
+				log.insertAdjacentHTML('beforeend', `${value}) Promise rejected (<small>Async code terminated</small>)<br/>`);
+			})
+			.catch((error) => console.error(error));
+
+
+		log.insertAdjacentHTML('beforeend', `${thisPromiseCount}) Promise made (<small>Sync code terminated</small>)<br/>`);
+	}
+
+	function getPromise(thisPromiseCount) {
+		return new Promise((resolve, reject) => {
+			log.insertAdjacentHTML('beforeend', `${thisPromiseCount}) Promise started (<small>Async code started</small>)<br/>`);
+
+			window.setTimeout(() => resolve(thisPromiseCount), Math.random() * 2000 + 1000);
+		});
+	}
+
+	testPromise();
+	testPromise();
+
+	</script>
+</body>
+</html>

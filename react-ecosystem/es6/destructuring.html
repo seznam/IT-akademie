@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Try ES6</title>
+</head>
+<body>
+	<div id="example"></div>
+	<script>
+
+	let car = {
+		color: 'black',
+		wheels: 4,
+		engine: {
+			power: 122
+		}
+	};
+
+	//let power = car.engine.power;
+	//let color = car.color;
+
+	let { color, wheels, engine: { power } } = car;
+
+	console.log('Barva: ', color);
+	console.log('Kol: ', wheels);
+	console.log('Motor: ', power);
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Try ES6</title>
+    </head>
+    <body>
+        <script>
+            class Vehicle {
+
+                constructor(wheels) {
+                    this._wheels = wheels;
+                }
+
+                getWheels() {
+                    return this._wheels;
+                }
+            }
+
+            class Car extends Vehicle {
+
+                constructor() {
+                    super(4);
+                }
+
+                static getName() {
+                    return 'car';
+                }
+            }
+
+            let car = new Car();
+
+            console.log(car.getWheels());
+            console.log(Car.getName());
+
+        </script>
+    </body>
+</html>

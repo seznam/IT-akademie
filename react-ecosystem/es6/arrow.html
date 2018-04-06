@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Try ES6</title>
+    </head>
+    <body>
+         <div id="example"></div>
+        <script>
+
+    		function double(...rest) {
+    			return (
+    				rest
+    					.map((number) => {
+    						return 2 * number;
+    					})
+    			);
+    		}
+
+            const array = [0, 1, 2, 3, 4];
+            const [zero, ...numbers] = array;
+
+
+            console.log(zero);
+            console.log(numbers);
+            console.log(double(...array), double.apply(null, array));
+
+        </script>
+    </body>
+</html>

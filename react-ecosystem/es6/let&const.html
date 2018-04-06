@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Try ES6</title>
+    </head>
+    <body>
+         <div id="example"></div>
+        <script>
+
+            let x = 1;
+
+            function todo() {
+                let x = 2;
+
+                console.log('print2', x);
+
+                if (true) {
+                    let x = 3;
+                    let y = 3;
+
+                    console.log('print3', x, y);
+                }
+
+                console.log('print4', x, y);
+            }
+
+            console.log('print1', x);
+            todo();
+
+        </script>
+    
+    </body>
+</html>
