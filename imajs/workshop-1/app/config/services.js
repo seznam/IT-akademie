@@ -1,7 +1,7 @@
 import Router from 'ima/router/Router';
 import Window from 'ima/window/Window';
 
-export let init = (ns, oc, config) => { // jshint ignore:line
+export default (ns, oc, config) => { // jshint ignore:line
 	let $window = oc.get(Window);
 	let $router = oc.get(Router);
 

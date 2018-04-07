@@ -1,5 +1,6 @@
 import AbstractComponent from 'ima/page/AbstractComponent';
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const STARS_COUNT = 5;
 

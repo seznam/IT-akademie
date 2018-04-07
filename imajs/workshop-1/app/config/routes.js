@@ -9,7 +9,7 @@ import MovieView from 'app/page/movie/MovieView';
 import NotFoundController from 'app/page/notFound/NotFoundController';
 import NotFoundView from 'app/page/notFound/NotFoundView';
 
-export let init = (ns, oc, config) => {
+export default (ns, oc, config) => {
 	let router = oc.get(Router);
 
 	router

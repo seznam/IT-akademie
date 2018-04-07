@@ -1,5 +1,6 @@
 import AbstractComponent from 'ima/page/AbstractComponent';
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Rating from 'app/component/atom/rating/Rating';
 import MovieEntity from 'app/model/movie/MovieEntity';
 
