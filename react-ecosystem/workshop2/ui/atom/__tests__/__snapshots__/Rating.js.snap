@@ -1,0 +1,441 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rating should render correctly for each rating value 1`] = `
+<div
+  className="atm-rating"
+>
+  <div
+    className="atm-rating-star"
+  />
+  <div
+    className="atm-rating-star"
+  />
+  <div
+    className="atm-rating-star"
+  />
+  <div
+    className="atm-rating-star"
+  />
+  <div
+    className="atm-rating-star"
+  />
+</div>
+`;
+
+exports[`Rating should render correctly for each rating value 2`] = `
+<div
+  className="atm-rating"
+>
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star"
+  />
+  <div
+    className="atm-rating-star"
+  />
+  <div
+    className="atm-rating-star"
+  />
+  <div
+    className="atm-rating-star"
+  />
+</div>
+`;
+
+exports[`Rating should render correctly for each rating value 3`] = `
+<div
+  className="atm-rating"
+>
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star"
+  />
+  <div
+    className="atm-rating-star"
+  />
+  <div
+    className="atm-rating-star"
+  />
+  <div
+    className="atm-rating-star"
+  />
+</div>
+`;
+
+exports[`Rating should render correctly for each rating value 4`] = `
+<div
+  className="atm-rating"
+>
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star"
+  />
+  <div
+    className="atm-rating-star"
+  />
+  <div
+    className="atm-rating-star"
+  />
+  <div
+    className="atm-rating-star"
+  />
+</div>
+`;
+
+exports[`Rating should render correctly for each rating value 5`] = `
+<div
+  className="atm-rating"
+>
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star"
+  />
+  <div
+    className="atm-rating-star"
+  />
+  <div
+    className="atm-rating-star"
+  />
+  <div
+    className="atm-rating-star"
+  />
+</div>
+`;
+
+exports[`Rating should render correctly for each rating value 6`] = `
+<div
+  className="atm-rating"
+>
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star"
+  />
+  <div
+    className="atm-rating-star"
+  />
+  <div
+    className="atm-rating-star"
+  />
+</div>
+`;
+
+exports[`Rating should render correctly for each rating value 7`] = `
+<div
+  className="atm-rating"
+>
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star"
+  />
+  <div
+    className="atm-rating-star"
+  />
+  <div
+    className="atm-rating-star"
+  />
+</div>
+`;
+
+exports[`Rating should render correctly for each rating value 8`] = `
+<div
+  className="atm-rating"
+>
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star"
+  />
+  <div
+    className="atm-rating-star"
+  />
+  <div
+    className="atm-rating-star"
+  />
+</div>
+`;
+
+exports[`Rating should render correctly for each rating value 9`] = `
+<div
+  className="atm-rating"
+>
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star"
+  />
+  <div
+    className="atm-rating-star"
+  />
+  <div
+    className="atm-rating-star"
+  />
+</div>
+`;
+
+exports[`Rating should render correctly for each rating value 10`] = `
+<div
+  className="atm-rating"
+>
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star"
+  />
+  <div
+    className="atm-rating-star"
+  />
+</div>
+`;
+
+exports[`Rating should render correctly for each rating value 11`] = `
+<div
+  className="atm-rating"
+>
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star"
+  />
+  <div
+    className="atm-rating-star"
+  />
+</div>
+`;
+
+exports[`Rating should render correctly for each rating value 12`] = `
+<div
+  className="atm-rating"
+>
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star"
+  />
+  <div
+    className="atm-rating-star"
+  />
+</div>
+`;
+
+exports[`Rating should render correctly for each rating value 13`] = `
+<div
+  className="atm-rating"
+>
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star"
+  />
+  <div
+    className="atm-rating-star"
+  />
+</div>
+`;
+
+exports[`Rating should render correctly for each rating value 14`] = `
+<div
+  className="atm-rating"
+>
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star"
+  />
+</div>
+`;
+
+exports[`Rating should render correctly for each rating value 15`] = `
+<div
+  className="atm-rating"
+>
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star"
+  />
+</div>
+`;
+
+exports[`Rating should render correctly for each rating value 16`] = `
+<div
+  className="atm-rating"
+>
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star"
+  />
+</div>
+`;
+
+exports[`Rating should render correctly for each rating value 17`] = `
+<div
+  className="atm-rating"
+>
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star"
+  />
+</div>
+`;
+
+exports[`Rating should render correctly for each rating value 18`] = `
+<div
+  className="atm-rating"
+>
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+</div>
+`;
+
+exports[`Rating should render correctly for each rating value 19`] = `
+<div
+  className="atm-rating"
+>
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+</div>
+`;
+
+exports[`Rating should render correctly for each rating value 20`] = `
+<div
+  className="atm-rating"
+>
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+  <div
+    className="atm-rating-star atm-rating-star-full"
+  />
+</div>
+`;
