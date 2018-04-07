@@ -1,0 +1,18 @@
+.atm-rating-star {
+  display: inline-block;
+
+  width: 24px;
+  height: 24px;
+
+  background: url(/static/img/ic_star_border_black_24px.svg) center center no-repeat;
+}
+
+.atm-rating-star-full {
+  background-image: url(/static/img/ic_star_black_24px.svg);
+}
+
+.ogm-movie .atm-rating {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
