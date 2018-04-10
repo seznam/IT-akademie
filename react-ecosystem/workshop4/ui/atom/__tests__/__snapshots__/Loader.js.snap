@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loader should render correctly with mode and layout passed in props 1`] = `
+<div
+  className="atm-loader atm-loader-small atm-loader-center"
+>
+  <span />
+  <span />
+  <span />
+  <span />
+  <span />
+</div>
+`;
+
+exports[`Loader should render correctly with no props 1`] = `
+<div
+  className="atm-loader"
+>
+  <span />
+  <span />
+  <span />
+  <span />
+  <span />
+</div>
+`;
