@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SmartImage should render correctly 1`] = `
+<div
+  className="atm-image atm-overflow atm-responsive"
+  style={null}
+>
+  <div
+    className="atm-sizer atm-placeholder"
+    style={
+      Object {
+        "paddingTop": "62.5%",
+      }
+    }
+  />
+  <div
+    className="atm-loader atm-loader-small atm-loader-center"
+  >
+    <span />
+    <span />
+    <span />
+    <span />
+    <span />
+  </div>
+</div>
+`;

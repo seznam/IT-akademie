@@ -1,0 +1,56 @@
+.tpl-main-layout {
+  margin: auto;
+
+  box-sizing: border-box;
+  max-width: 980px;
+  padding: 0 16px;
+}
+
+.tpl-main-layout-header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+
+  width: 100%;
+  height: 60px;
+
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.tpl-main-layout-header-content {
+  position: relative;
+
+  box-sizing: border-box;
+  margin: auto;
+  width: 100%;
+  max-width: 980px;
+  height: 100%;
+  padding: 0 16px;
+}
+
+.tpl-main-layout-logo {
+  display: block;
+
+  position: absolute;
+  left: 16px;
+  top: 0;
+  width: 60px;
+  height: 100%;
+
+  text-indent: -9999px;
+
+  background: url(/static/img/logo.svg) center center no-repeat;
+  background-size: contain;
+}
+
+.tpl-main-layout-main {
+  margin-top: 60px;
+  padding: 16px 0;
+}
+
+.tpl-main-layout-footer {
+  padding: 1rem 0;
+
+  text-align: center;
+}

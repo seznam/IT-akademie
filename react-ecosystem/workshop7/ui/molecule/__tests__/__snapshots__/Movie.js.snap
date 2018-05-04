@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Movie should render correctly 1`] = `
+<article
+  className="mol-movie"
+>
+  <div
+    className="mol-movie-content"
+  >
+    <mock-link
+      href={
+        Object {
+          "pathname": "/movie",
+          "query": Object {
+            "m": "some-movie-url-slug",
+          },
+        }
+      }
+      prefetch={true}
+    >
+      <a
+        className="mol-movie-image"
+      >
+        <div
+          className="atm-image atm-overflow atm-responsive"
+          style={null}
+        >
+          <div
+            className="atm-sizer atm-placeholder"
+            style={
+              Object {
+                "paddingTop": "46.875%",
+              }
+            }
+          />
+          <div
+            className="atm-loader atm-loader-small atm-loader-center"
+          >
+            <span />
+            <span />
+            <span />
+            <span />
+            <span />
+          </div>
+        </div>
+      </a>
+    </mock-link>
+    <mock-link
+      href={
+        Object {
+          "pathname": "/movie",
+          "query": Object {
+            "m": "some-movie-url-slug",
+          },
+        }
+      }
+      prefetch={true}
+    >
+      <a
+        className="mol-movie-title"
+      >
+        <h2
+          className="mol-movie-title-text"
+        >
+          FooBar movie
+        </h2>
+      </a>
+    </mock-link>
+    <p
+      className="mol-movie-perex"
+    >
+      Lorem ipsum dolor sit amet
+    </p>
+  </div>
+</article>
+`;
