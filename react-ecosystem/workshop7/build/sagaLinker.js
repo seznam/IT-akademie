@@ -2,7 +2,6 @@ const chokidar = require('chokidar');
 const fs = require('fs');
 const glob = require('glob');
 const path = require('path');
-const {promisify} = require('util');
 
 const LINKER_FILE_PATH = path.join('store', 'sagas.js');
 const SAGAS_LINKER_TEMPLATE = `
@@ -30,7 +29,7 @@ function generateLinker(sagas, template) {
 
   return template
     .replace('%SAGA_IMPORTS%', imports.join('\n'))
-    .replace('%SAGA_LIST%', `${identifiers.join(',\n  ')},`);
+    .replace('%SAGA_LIST%', `${identifiers.join(',\n  ')}${identifiers.length ? ',' : ''}`);
 }
 
 function rebuildLinker(projectRoot, callback = null) {

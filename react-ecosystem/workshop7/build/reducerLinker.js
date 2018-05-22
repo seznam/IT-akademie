@@ -2,7 +2,6 @@ const chokidar = require('chokidar');
 const fs = require('fs');
 const glob = require('glob');
 const path = require('path');
-const {promisify} = require('util');
 
 const REDUCER_LINKER_TEMPLATE = `
 // THIS FILE IS GENERATED AUTOMATICALLY. ANY CHANGES WILL BE DISCARDED BY THE BUILD SYSTEM.
@@ -14,10 +13,19 @@ export default combineReducers({
   %LINKS%
 });
 `.replace(/^\s+/, '');
+const NOOP_REDUCER_LINKER = `
+// THIS FILE IS GENERATED AUTOMATICALLY. ANY CHANGES WILL BE DISCARDED BY THE BUILD SYSTEM.
+
+export default state => state || {}
+`.replace(/^\s+/, '');
 const LINKER_FILE_PATH = path.join('store', 'reducer.js');
 const DEPENDENCIES_FILE_PATTERN = 'ui/organism/*/{state,reducer}.js';
 
 function generateLinker(dependencies, template) {
+  if (!dependencies.length) {
+    return NOOP_REDUCER_LINKER;
+  }
+
   const organismReducers = new Map();
   for (const dependency of dependencies) {
     const pathParts = dependency.split(path.sep);
@@ -55,7 +63,7 @@ function generateLinker(dependencies, template) {
 }
 
 function rebuildLinker(projectRoot, callback = null) {
-  const globOptions =  {
+  const globOptions = {
     cwd: projectRoot,
   };
   if (callback) {
