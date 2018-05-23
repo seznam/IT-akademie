@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import PropTypes from 'prop-types';
+import React from 'react';
 import DefaultTemplate from '~/ui/template/DefaultTemplate';
 import connectPage from '~/store/connectPage';
 import {fetchCategories} from '~/data/categories';

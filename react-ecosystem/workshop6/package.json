@@ -5,10 +5,10 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "eslint --max-warnings=0 . && jest",
     "test-watch": "jest --watch",
     "dev": "next",
-    "build": "next build",
+    "build": "npm test && next build",
     "start": "next start"
   },
   "author": "Seznam.cz",

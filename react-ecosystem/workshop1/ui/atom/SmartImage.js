@@ -2,6 +2,7 @@ import observe from '@jurca/react-dom-observe';
 import classnames from 'classnames';
 import throttle from 'lodash.throttle';
 import PropTypes from 'prop-types';
+import React from 'react';
 import Loader from '~/ui/atom/Loader';
 import Sizer from '~/ui/atom/Sizer';
 import {getBoundingClientRect, getVisibilityRatio} from '~/util/componentHelpers';

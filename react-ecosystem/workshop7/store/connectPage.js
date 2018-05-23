@@ -37,6 +37,8 @@ export default function connectPage(PageComponent, stateToProps = IDENTITY_SELEC
       if (PageComponent.getInitialProps) {
         return PageComponent.getInitialProps(context);
       }
+
+      return {};
     }
 
     static displayName = `PageConnector(${pageComponentName})`;
