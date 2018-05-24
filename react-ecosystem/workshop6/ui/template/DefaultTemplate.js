@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import PropTypes from 'prop-types';
-import '~/ui/atom/atoms.css';
 import SearchForm from '~/ui/organism/searchForm/SearchForm';
 import '~/ui/template/defaultTemplate.css';
 
