@@ -1,9 +1,9 @@
 import {createStore, applyMiddleware} from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import rootReducer from '~/store/reducer';
-import {initStore, start} from '~/store/sagas';
+import {rootSaga} from '~/store/sagas';
 
-export default function storeFactory(initialState, {isServer, req, query}) {
+export default function storeFactory(initialState) {
   const sagaMiddleware = createSagaMiddleware();
   const store = createStore(
     rootReducer,
@@ -12,11 +12,7 @@ export default function storeFactory(initialState, {isServer, req, query}) {
   );
 
   store.runSagaTask = () => {
-    if (isServer) {
-      store.sagaTask = sagaMiddleware.run(initStore, req, query);
-    } else {
-      store.sagaTask = sagaMiddleware.run(start);
-    }
+    store.sagaTask = sagaMiddleware.run(rootSaga);
   };
 
   store.runSagaTask();
