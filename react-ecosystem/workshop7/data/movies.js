@@ -25,7 +25,7 @@ const DATA = [
     ],
     video: [
       {
-        src: '//video.csfd.cz/files/videos/video/159/927/159927890_cc5e48.mp4',
+        src: 'https://video.csfd.cz/files/videos/157/706/157706208/159927890_ab7849.mp4',
         width: 1702,
         height: 720,
       },
@@ -64,8 +64,8 @@ const DATA = [
     ],
     video: [
       {
-        src: '//video.csfd.cz/files/videos/video/160/084/160084167_3143e7.mp4',
-        width: 1694,
+        src: 'https://video.csfd.cz/files/videos/157/706/157706204/159926185_59e157.mp4',
+        width: 1698,
         height: 720,
       },
     ],
@@ -102,8 +102,8 @@ const DATA = [
     ],
     video: [
       {
-        src: '//video.csfd.cz/files/videos/video/159/808/159808246_6bf364.mp4',
-        width: 1431,
+        src: 'https://video.csfd.cz/files/videos/157/703/157703953/159776611_ba8de4.mp4',
+        width: 1440,
         height: 720,
       },
     ],
@@ -143,9 +143,9 @@ const DATA = [
     ],
     video: [
       {
-        src: '//video.csfd.cz/files/videos/video/159/956/159956158_134e56.mp4',
-        width: 654,
-        height: 360,
+        src: 'https://video.csfd.cz/files/videos/157/703/157703057/159691900_91b87a.mp4',
+        width: 1321,
+        height: 720,
       },
     ],
     date: '2015-09-24',
@@ -175,16 +175,16 @@ const DATA = [
     category: 3,
     images: [
       {
-        src: '//img.csfd.cz/files/images/film/photos/159/980/159980433_480525.jpg',
-        width: 2192,
-        height: 1156,
+        src: 'https://img.csfd.cz/files/images/film/photos/159/847/159847062_5ab42e.jpg',
+        width: 3000,
+        height: 2020,
       },
     ],
     video: [
       {
-        src: '//video.csfd.cz/files/videos/video/160/275/160275767_443d6d.mp4',
-        width: 640,
-        height: 360,
+        src: 'https://video.csfd.cz/files/videos/157/709/157709296/160275769_4c52f6.mp4',
+        width: 1280,
+        height: 720,
       },
     ],
     date: '2016-01-07',
@@ -230,7 +230,7 @@ const DATA = [
     ],
     video: [
       {
-        src: '//video.csfd.cz/files/videos/video/160/150/160150758_1cba26.mp4',
+        src: 'https://video.csfd.cz/files/videos/157/708/157708068/160150758_24bc2f.mp4',
         width: 1732,
         height: 720,
       },
