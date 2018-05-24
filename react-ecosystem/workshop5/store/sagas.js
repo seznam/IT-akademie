@@ -3,7 +3,7 @@ import * as categoriesResource from '~/data/categories';
 import * as movieResource from '~/data/movies';
 import MovieAction from '~/store/movieAction';
 
-export function *rootSaga() {
+export default function *rootSaga() {
   yield fork(moviesSaga);
   yield fork(movieSaga);
   yield fork(categoriesSaga);

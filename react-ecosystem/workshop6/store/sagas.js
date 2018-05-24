@@ -7,7 +7,7 @@ const SAGAS = [
   movieListingSaga,
 ];
 
-export function *rootSaga() {
+export default function *rootSaga() {
   for (const organismSaga of SAGAS) {
     yield fork(organismSaga);
   }
