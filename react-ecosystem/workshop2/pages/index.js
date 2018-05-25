@@ -2,12 +2,11 @@ import Head from 'next/head';
 import PropTypes from 'prop-types';
 import React from 'react';
 import DefaultTemplate from '~/ui/template/DefaultTemplate';
-import connectPage from '~/store/connectPage';
 import {fetchCategories} from '~/data/categories';
 import {fetchMovies, searchMovies} from '~/data/movies';
 import MovieListing from '~/ui/organism/MovieListing';
 
-export default connectPage(class Homepage extends React.PureComponent {
+export default class Homepage extends React.PureComponent {
   static async getInitialProps({query}) {
     return {
       searchQuery: query.q || '',
@@ -37,4 +36,4 @@ export default connectPage(class Homepage extends React.PureComponent {
       </DefaultTemplate>
     );
   }
-});
+}

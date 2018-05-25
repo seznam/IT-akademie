@@ -6,23 +6,18 @@ exports[`Rating should render correctly for each rating value 1`] = `
 >
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
 </div>
 `;
@@ -33,23 +28,18 @@ exports[`Rating should render correctly for each rating value 2`] = `
 >
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
 </div>
 `;
@@ -60,23 +50,18 @@ exports[`Rating should render correctly for each rating value 3`] = `
 >
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
 </div>
 `;
@@ -87,23 +72,18 @@ exports[`Rating should render correctly for each rating value 4`] = `
 >
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
 </div>
 `;
@@ -114,23 +94,18 @@ exports[`Rating should render correctly for each rating value 5`] = `
 >
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
 </div>
 `;
@@ -141,23 +116,18 @@ exports[`Rating should render correctly for each rating value 6`] = `
 >
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
 </div>
 `;
@@ -168,23 +138,18 @@ exports[`Rating should render correctly for each rating value 7`] = `
 >
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
 </div>
 `;
@@ -195,23 +160,18 @@ exports[`Rating should render correctly for each rating value 8`] = `
 >
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
 </div>
 `;
@@ -222,23 +182,18 @@ exports[`Rating should render correctly for each rating value 9`] = `
 >
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
 </div>
 `;
@@ -249,23 +204,18 @@ exports[`Rating should render correctly for each rating value 10`] = `
 >
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
 </div>
 `;
@@ -276,23 +226,18 @@ exports[`Rating should render correctly for each rating value 11`] = `
 >
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
 </div>
 `;
@@ -303,23 +248,18 @@ exports[`Rating should render correctly for each rating value 12`] = `
 >
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
 </div>
 `;
@@ -330,23 +270,18 @@ exports[`Rating should render correctly for each rating value 13`] = `
 >
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
 </div>
 `;
@@ -357,23 +292,18 @@ exports[`Rating should render correctly for each rating value 14`] = `
 >
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
 </div>
 `;
@@ -384,23 +314,18 @@ exports[`Rating should render correctly for each rating value 15`] = `
 >
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
 </div>
 `;
@@ -411,23 +336,18 @@ exports[`Rating should render correctly for each rating value 16`] = `
 >
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
 </div>
 `;
@@ -438,23 +358,18 @@ exports[`Rating should render correctly for each rating value 17`] = `
 >
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star"
-    onClick={undefined}
   />
 </div>
 `;
@@ -465,23 +380,18 @@ exports[`Rating should render correctly for each rating value 18`] = `
 >
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
 </div>
 `;
@@ -492,23 +402,18 @@ exports[`Rating should render correctly for each rating value 19`] = `
 >
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
 </div>
 `;
@@ -519,23 +424,18 @@ exports[`Rating should render correctly for each rating value 20`] = `
 >
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
   <button
     className="atm-rating-star atm-rating-star-full"
-    onClick={undefined}
   />
 </div>
 `;

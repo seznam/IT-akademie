@@ -1,33 +1,34 @@
 import Head from 'next/head';
 import PropTypes from 'prop-types';
 import React from 'react';
-import connectPage from '~/store/connectPage';
+import {connect} from 'react-redux';
+import getterFactory from '~/store/getterFactory';
 import DefaultTemplate from '~/ui/template/DefaultTemplate';
 import MovieOrganism from '~/ui/organism/movie/Movie';
 
-export default connectPage(class Movie extends React.PureComponent {
+export default connect(
+  getterFactory('movie.movie'),
+)(class Movie extends React.PureComponent {
   static template = DefaultTemplate;
   static organisms = [
     MovieOrganism,
   ];
 
   static propTypes = {
-    movie: PropTypes.shape({
-      movie: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-      }).isRequired,
-    }).isRequired,
+    title: PropTypes.string.isRequired,
   };
 
   render() {
-    return [
-      <Head key="head">
-        <title>
-          {this.props.movie.movie.title} | SFlix
-        </title>
-      </Head>,
+    return (
+      <React.Fragment>
+        <Head>
+          <title>
+            {this.props.title} | SFlix
+          </title>
+        </Head>
 
-      <MovieOrganism key="body"/>,
-    ];
+        <MovieOrganism/>
+      </React.Fragment>
+    );
   }
 });

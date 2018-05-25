@@ -1,12 +1,14 @@
 import Head from 'next/head';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
 import DefaultTemplate from '~/ui/template/DefaultTemplate';
-import connectPage from '~/store/connectPage';
 import MovieAction from '~/store/movieAction';
 import MovieListing from '~/ui/organism/MovieListing';
 
-export default connectPage(class Homepage extends React.PureComponent {
+export default connect(
+  state => state,
+)(class Homepage extends React.PureComponent {
   static getInitialProps({query, store}) {
     const searchQuery = query.q || '';
     store.dispatch(MovieAction.setSearchQuery(searchQuery));
