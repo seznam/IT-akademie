@@ -26,12 +26,7 @@ exports[`Movie should render correctly 1`] = `
           style={null}
         >
           <div
-            className="atm-sizer atm-placeholder"
-            style={
-              Object {
-                "paddingTop": "46.875%",
-              }
-            }
+            className="jsx-352074680 atm-sizer atm-placeholder"
           />
           <div
             className="atm-loader atm-loader-small atm-loader-center"

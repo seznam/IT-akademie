@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Movie from '~/ui/molecule/Movie';
-import '~/ui/organism/movieListing/movieListing.css';
 
 export default function MovieListingUI({movies}) {
   return (
@@ -11,6 +10,12 @@ export default function MovieListingUI({movies}) {
           <Movie movie={movie}/>
         </li>,
       )}
+      <style jsx>{`
+        .ogm-movie-listing {
+          margin: 0;
+          padding: 0;
+        }
+      `}</style>
     </ul>
   );
 }

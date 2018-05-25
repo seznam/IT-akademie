@@ -6,12 +6,7 @@ exports[`SmartImage should render correctly 1`] = `
   style={null}
 >
   <div
-    className="atm-sizer atm-placeholder"
-    style={
-      Object {
-        "paddingTop": "62.5%",
-      }
-    }
+    className="jsx-151239249 atm-sizer atm-placeholder"
   />
   <div
     className="atm-loader atm-loader-small atm-loader-center"

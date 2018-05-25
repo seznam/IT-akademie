@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import '~/ui/organism/movieListing.css';
 import Movie from '~/ui/molecule/Movie';
 
 export default function MovieListing({movies}) {
@@ -10,6 +9,12 @@ export default function MovieListing({movies}) {
           <Movie movie={movie}/>
         </li>,
       )}
+      <style jsx>{`
+        .ogm-movie-listing {
+          margin: 0;
+          padding: 0;
+        }
+      `}</style>
     </ul>
   );
 }

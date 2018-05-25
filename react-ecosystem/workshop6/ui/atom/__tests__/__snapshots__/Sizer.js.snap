@@ -2,1089 +2,594 @@
 
 exports[`Sizer should render correctly 1`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "9900%",
-    }
-  }
+  className="jsx-4128469550 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 2`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "4900%",
-    }
-  }
+  className="jsx-80534339 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 3`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "3233.3333333333335%",
-    }
-  }
+  className="jsx-2144445652 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 4`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "2400%",
-    }
-  }
+  className="jsx-149667720 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 5`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "1900%",
-    }
-  }
+  className="jsx-669748006 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 6`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "1566.6666666666665%",
-    }
-  }
+  className="jsx-519241329 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 7`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "1328.5714285714287%",
-    }
-  }
+  className="jsx-3288775295 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 8`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "1150%",
-    }
-  }
+  className="jsx-3232812171 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 9`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "1011.1111111111111%",
-    }
-  }
+  className="jsx-1811682256 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 10`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "900%",
-    }
-  }
+  className="jsx-1532254583 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 11`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "809.0909090909091%",
-    }
-  }
+  className="jsx-1274819904 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 12`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "733.3333333333333%",
-    }
-  }
+  className="jsx-943542052 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 13`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "669.2307692307693%",
-    }
-  }
+  className="jsx-1029164362 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 14`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "614.2857142857143%",
-    }
-  }
+  className="jsx-2423523040 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 15`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "566.6666666666667%",
-    }
-  }
+  className="jsx-2091968066 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 16`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "525%",
-    }
-  }
+  className="jsx-1007644508 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 17`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "488.2352941176471%",
-    }
-  }
+  className="jsx-3161830572 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 18`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "455.55555555555554%",
-    }
-  }
+  className="jsx-1021100053 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 19`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "426.3157894736843%",
-    }
-  }
+  className="jsx-947755656 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 20`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "400%",
-    }
-  }
+  className="jsx-1941694298 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 21`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "376.1904761904762%",
-    }
-  }
+  className="jsx-2187212640 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 22`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "354.54545454545456%",
-    }
-  }
+  className="jsx-417865169 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 23`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "334.7826086956522%",
-    }
-  }
+  className="jsx-3142257614 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 24`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "316.66666666666663%",
-    }
-  }
+  className="jsx-1847272241 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 25`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "300%",
-    }
-  }
+  className="jsx-1467615421 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 26`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "284.61538461538464%",
-    }
-  }
+  className="jsx-2638175196 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 27`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "270.3703703703704%",
-    }
-  }
+  className="jsx-1946507393 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 28`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "257.14285714285717%",
-    }
-  }
+  className="jsx-4031996502 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 29`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "244.82758620689654%",
-    }
-  }
+  className="jsx-1928473014 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 30`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "233.33333333333334%",
-    }
-  }
+  className="jsx-1439964885 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 31`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "222.5806451612903%",
-    }
-  }
+  className="jsx-2242192358 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 32`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "212.5%",
-    }
-  }
+  className="jsx-1502900196 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 33`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "203.03030303030303%",
-    }
-  }
+  className="jsx-2767021874 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 34`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "194.11764705882354%",
-    }
-  }
+  className="jsx-2703287387 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 35`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "185.71428571428572%",
-    }
-  }
+  className="jsx-3098114233 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 36`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "177.77777777777777%",
-    }
-  }
+  className="jsx-463136945 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 37`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "170.27027027027026%",
-    }
-  }
+  className="jsx-3176981426 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 38`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "163.1578947368421%",
-    }
-  }
+  className="jsx-2967502383 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 39`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "156.4102564102564%",
-    }
-  }
+  className="jsx-928477094 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 40`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "150%",
-    }
-  }
+  className="jsx-4008332218 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 41`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "143.90243902439025%",
-    }
-  }
+  className="jsx-3355475640 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 42`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "138.0952380952381%",
-    }
-  }
+  className="jsx-617033867 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 43`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "132.5581395348837%",
-    }
-  }
+  className="jsx-4164475813 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 44`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "127.27272727272727%",
-    }
-  }
+  className="jsx-762110033 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 45`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "122.22222222222223%",
-    }
-  }
+  className="jsx-3943399088 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 46`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "117.3913043478261%",
-    }
-  }
+  className="jsx-1707720870 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 47`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "112.7659574468085%",
-    }
-  }
+  className="jsx-3053633838 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 48`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "108.33333333333333%",
-    }
-  }
+  className="jsx-328512089 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 49`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "104.08163265306123%",
-    }
-  }
+  className="jsx-3950856669 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 50`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "100%",
-    }
-  }
+  className="jsx-696008831 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 51`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "96.07843137254902%",
-    }
-  }
+  className="jsx-3606220810 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 52`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "92.3076923076923%",
-    }
-  }
+  className="jsx-1906921592 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 53`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "88.67924528301887%",
-    }
-  }
+  className="jsx-1742765604 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 54`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "85.18518518518519%",
-    }
-  }
+  className="jsx-207537957 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 55`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "81.81818181818183%",
-    }
-  }
+  className="jsx-3655525858 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 56`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "78.57142857142857%",
-    }
-  }
+  className="jsx-1866651341 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 57`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "75.43859649122807%",
-    }
-  }
+  className="jsx-3097819620 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 58`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "72.41379310344827%",
-    }
-  }
+  className="jsx-2767518305 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 59`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "69.49152542372882%",
-    }
-  }
+  className="jsx-4243452163 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 60`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "66.66666666666666%",
-    }
-  }
+  className="jsx-1878633344 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 61`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "63.934426229508205%",
-    }
-  }
+  className="jsx-1394759896 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 62`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "61.29032258064516%",
-    }
-  }
+  className="jsx-3825003298 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 63`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "58.730158730158735%",
-    }
-  }
+  className="jsx-1061008156 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 64`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "56.25%",
-    }
-  }
+  className="jsx-2319382276 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 65`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "53.84615384615385%",
-    }
-  }
+  className="jsx-1177441739 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 66`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "51.515151515151516%",
-    }
-  }
+  className="jsx-24932950 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 67`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "49.25373134328358%",
-    }
-  }
+  className="jsx-1618107916 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 68`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "47.05882352941176%",
-    }
-  }
+  className="jsx-1572390828 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 69`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "44.927536231884055%",
-    }
-  }
+  className="jsx-2587351288 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 70`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "42.857142857142854%",
-    }
-  }
+  className="jsx-256250175 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 71`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "40.845070422535215%",
-    }
-  }
+  className="jsx-3401183867 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 72`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "38.88888888888889%",
-    }
-  }
+  className="jsx-496966090 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 73`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "36.986301369863014%",
-    }
-  }
+  className="jsx-2236107124 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 74`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "35.13513513513514%",
-    }
-  }
+  className="jsx-1419062307 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 75`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "33.33333333333333%",
-    }
-  }
+  className="jsx-1526735808 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 76`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "31.57894736842105%",
-    }
-  }
+  className="jsx-2009514509 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 77`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "29.87012987012987%",
-    }
-  }
+  className="jsx-59431716 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 78`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "28.205128205128204%",
-    }
-  }
+  className="jsx-450537628 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 79`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "26.582278481012654%",
-    }
-  }
+  className="jsx-986473727 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 80`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "25%",
-    }
-  }
+  className="jsx-3091088905 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 81`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "23.456790123456788%",
-    }
-  }
+  className="jsx-2073832344 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 82`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "21.951219512195124%",
-    }
-  }
+  className="jsx-2425216056 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 83`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "20.481927710843372%",
-    }
-  }
+  className="jsx-1959936444 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 84`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "19.047619047619047%",
-    }
-  }
+  className="jsx-2837192251 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 85`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "17.647058823529413%",
-    }
-  }
+  className="jsx-763087839 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 86`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "16.27906976744186%",
-    }
-  }
+  className="jsx-4168946253 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 87`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "14.942528735632186%",
-    }
-  }
+  className="jsx-2572653308 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 88`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "13.636363636363635%",
-    }
-  }
+  className="jsx-344198418 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 89`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "12.359550561797752%",
-    }
-  }
+  className="jsx-3914475799 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 90`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "11.11111111111111%",
-    }
-  }
+  className="jsx-2749962816 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 91`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "9.89010989010989%",
-    }
-  }
+  className="jsx-1630099128 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 92`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "8.695652173913043%",
-    }
-  }
+  className="jsx-560761610 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 93`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "7.526881720430108%",
-    }
-  }
+  className="jsx-432713836 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 94`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "6.382978723404255%",
-    }
-  }
+  className="jsx-3709327981 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 95`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "5.263157894736842%",
-    }
-  }
+  className="jsx-2462454920 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 96`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "4.166666666666666%",
-    }
-  }
+  className="jsx-3978564005 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 97`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "3.0927835051546393%",
-    }
-  }
+  className="jsx-502251899 atm-sizer atm-placeholder"
 />
 `;
 
 exports[`Sizer should render correctly 98`] = `
 <div
-  className="atm-sizer"
-  style={
-    Object {
-      "paddingTop": "2.0408163265306123%",
-    }
-  }
+  className="jsx-833598974 atm-sizer"
 />
 `;
 
 exports[`Sizer should render correctly 99`] = `
 <div
-  className="atm-sizer atm-placeholder"
-  style={
-    Object {
-      "paddingTop": "1.0101010101010102%",
-    }
-  }
+  className="jsx-2088615730 atm-sizer atm-placeholder"
 />
 `;

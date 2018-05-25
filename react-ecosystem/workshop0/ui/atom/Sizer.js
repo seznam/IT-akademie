@@ -10,10 +10,13 @@ export default function Sizer({width, height, placeholder}) {
           'atm-placeholder': placeholder,
         },
       )}
-      style={{
-        paddingTop: `${height / width * 100}%`,
-      }}
-    />
+    >
+      <style jsx>{`
+        .atm-sizer {
+          padding-top: ${height / width * 100}%
+        }
+      `}</style>
+    </div>
   );
 }
 
