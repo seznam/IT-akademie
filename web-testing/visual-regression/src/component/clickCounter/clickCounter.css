@@ -1,0 +1,18 @@
+.click-counter {
+	display: flex;
+}
+
+.click-counter-button {
+	border-radius: 25px;
+	border: 1px solid grey;
+	width: 46px;
+	height: 46px;
+	text-decoration: none;
+	outline: 0;
+}
+
+.click-counter-value {
+	font-size: 40px;
+	width: 150px;
+	text-align: center;
+}

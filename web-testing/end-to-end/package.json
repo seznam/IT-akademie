@@ -1,0 +1,21 @@
+{
+  "name": "e2e",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node_modules/.bin/wdio wdio.conf.js",
+    "selenium": "node_modules/.bin/selenium-standalone install --drivers.firefox.version=0.23.0 && node_modules/.bin/selenium-standalone start --drivers.firefox.version=0.23.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "6.26.3",
+    "babel-plugin-transform-es2015-modules-commonjs": "6.26.2",
+    "jasmine": "3.2.0",
+    "selenium-standalone": "6.15.3",
+    "wdio-jasmine-framework": "0.3.6",
+    "wdio-spec-reporter": "0.1.5",
+    "webdriverio": "4.14.0"
+  }
+}

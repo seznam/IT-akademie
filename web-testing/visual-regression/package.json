@@ -1,0 +1,57 @@
+{
+  "name": "storybook",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-scripts": "2.0.4"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/loki",
+    "start": "npm test",
+    "report": "reg-cli .loki/current/ .loki/reference/ .loki/reg-diff/ -R ./report.html",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@storybook/addon-actions": "4.0.2",
+    "@storybook/addon-links": "4.0.2",
+    "@storybook/addon-viewport": "4.0.2",
+    "@storybook/addons": "4.0.2",
+    "@storybook/react": "4.0.2",
+    "babel-core": "6.26.3",
+    "babel-runtime": "6.26.0",
+    "jest": "23.6.0",
+    "loki": "0.13.0",
+    "reg-cli": "0.13.0-beta.1"
+  },
+  "loki": {
+    "configurations": {
+      "chrome.laptop": {
+        "target": "chrome.app",
+        "width": 1366,
+        "height": 768,
+        "deviceScaleFactor": 1,
+        "mobile": false,
+        "fitWindow": false
+      },
+      "chrome.iphone7": {
+        "target": "chrome.app",
+        "preset": "iPhone 7"
+      }
+    }
+  },
+  "moduleRoots": [
+    "./"
+  ]
+}

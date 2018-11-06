@@ -1,0 +1,23 @@
+{
+  "name": "performance",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node -r source-map-support/register index.js",
+    "build": "rm -rf lib && babel src --out-dir lib --copy-files --plugins=transform-es2015-modules-commonjs",
+    "dev": "npm run build -- --source-maps --watch",
+    "start": "node -r source-map-support/register index.js",
+    "build:start": "npm run build -- --source-maps && npm start"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "6.26.2",
+    "source-map-support": "0.5.9"
+  },
+  "dependencies": {
+    "puppeteer": "1.9.0"
+  }
+}
