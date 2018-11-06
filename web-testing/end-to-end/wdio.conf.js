@@ -21,7 +21,7 @@ exports.config = {
 	logLevel: 'silent',
 	coloredLogs: true,
 	screenshotPath: 'screens',
-	baseUrl: 'https://www.seznamzpravy.cz',
+	baseUrl: 'https://www.seznam.cz',
 	waitforTimeout: 5000,
 	framework: 'jasmine',
 	jasmineNodeOpts: {

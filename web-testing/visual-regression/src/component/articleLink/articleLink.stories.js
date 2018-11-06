@@ -9,4 +9,4 @@ const POST = {
 };
 
 storiesOf('ArticleLink', module)
-  .add('default', () => (<ArticleLink post={POST} />) )
+	.add('default', () => (<ArticleLink post={POST} />));

@@ -6,7 +6,7 @@ const CHAR = {
 	PASS: '✓',
 	FAIL: '✘'
 };
-const URL = 'https://www.seznamzpravy.cz';
+const URL = 'https://www.seznam.cz';
 const REFERENCE_DATA_PATH = './referenceData.json';
 const DIFF_TOLERANCE = 1.2;
 
@@ -35,26 +35,48 @@ class Performance {
 	_printResults(performance) {
 		let reference = this._getReferenceData();
 
-		Object.keys(performance)
-			.forEach(performanceKey => {
-				console.log(performanceKey);
+		this._printTimingResults(performance.timing, reference.timing);
+		this._printCoverageResults(performance.coverage, reference.coverage);
+	}
 
-				Object.keys(performance[performanceKey]).forEach(key => {
-					let currentValue = performance[performanceKey][key];
-					let referenceValue = reference[performanceKey][key];
-					let result = CHAR.PASS;
+	_printTimingResults(current, reference) {
+		console.log('Timing:');
 
-					if (referenceValue * DIFF_TOLERANCE < currentValue) {
-						result = CHAR.FAIL;
-					}
+		Object.keys(current).forEach(key => {
+			let currentKeyValue = current[key];
+			let referenceKeyValue = reference[key];
 
-					console.log(
-						result,
-						key,
-						`[curr: ${currentValue}, ref: ${referenceValue}]`
-					);
-				});
-			})
+			this._printKeyResults(currentKeyValue, referenceKeyValue, key);
+		});
+	}
+
+	_printCoverageResults(current, reference) {
+		console.log('Coverage:');
+
+		Object.keys(current).forEach(key => {
+			let currentKeyValue = current[key].unusedPercent;
+			let referenceKeyValue = reference[key].unusedPercent;
+
+			this._printKeyResults(
+				currentKeyValue,
+				referenceKeyValue,
+				`${key} unusedPercent`
+			);
+		});
+	}
+
+	_printKeyResults(current, reference, key) {
+		let result = CHAR.PASS;
+
+		if (reference * DIFF_TOLERANCE < current) {
+			result = CHAR.FAIL;
+		}
+
+		console.log(
+			result,
+			key,
+			`[curr: ${current}, ref: ${reference}]`
+		);
 	}
 
 	_getReferenceData() {
@@ -77,46 +99,38 @@ class Performance {
 		let requests = [];
 		let responseHandler = response => requests.push(response.request());
 
-		page.on('response', responseHandler);
+		await page.coverage.startJSCoverage();
+		await page.coverage.startCSSCoverage();
 		await page.goto(url, { timeout: 90000 });
-		page.removeListener('response', responseHandler);
+		let jsCoverage = await page.coverage.stopJSCoverage();
+		let cssCoverage = await page.coverage.stopCSSCoverage();
 
 		return {
 			timing: await this._getTiming(page),
-			sizes: await this._getSizes(requests)
-		}
+			coverage: {
+				js: await this._getCoverage(jsCoverage),
+				css: await this._getCoverage(cssCoverage)
+			}
+		};
 	}
 
-	async _getSizes(requests) {
-		let sizes = {};
+	async _getCoverage(coverage) {
+		let totalBytes = 0;
+		let usedBytes = 0;
 
-		for (let request of requests) {
-			let response = request.response();
-			let resourceType = request.resourceType();
+		coverage.forEach(entry => {
+			totalBytes += entry.text.length;
 
-			if (!response.ok() || !resourceType) {
-				continue;
-			}
+			entry.ranges.forEach(range => {
+				usedBytes += range.end - range.start - 1;
+			});
+		})
 
-			let buffer;
-
-			try {
-				buffer = await response.buffer();
-			} catch (e) {
-				console.warn(
-					`Failed to load buffer for request at url ${request.url()}`
-				);
-				continue;
-			}
-
-			if (!sizes[resourceType]) {
-				sizes[resourceType] = 0;
-			}
-
-			sizes[resourceType] += buffer.length;
+		return {
+			totalBytes,
+			usedBytes,
+			unusedPercent: (1 - usedBytes / totalBytes) * 100
 		};
-
-		return sizes;
 	}
 
 	async _getTiming(page) {

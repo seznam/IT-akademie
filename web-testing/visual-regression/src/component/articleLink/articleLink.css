@@ -1,6 +1,9 @@
+.article-link {
+	text-decoration: none;
+}
+
 .article-link-container {
 	max-width: 600px;
-	background: #FFFFF4;
 	border-radius: 25px;
 	border: 1px solid grey;
 	padding: 10px;
@@ -9,12 +12,4 @@
 
 .article-link-description {
 	padding-left: 20px;
-}
-
-.article-link-description-text {
-	color: black;
-}
-
-.article-link a {
-	text-decoration: none;
 }

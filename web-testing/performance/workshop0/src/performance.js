@@ -4,7 +4,7 @@ const CHAR = {
 	PASS: '✓',
 	FAIL: '✘'
 };
-const URL = 'https://www.seznamzpravy.cz';
+const URL = 'https://www.seznam.cz';
 
 class Performance {
 	async run() {

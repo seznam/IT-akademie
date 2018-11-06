@@ -14,7 +14,7 @@ class Headline extends Component {
 		}
 
 		return (
-			<Type>{this.props.children}</Type>
+			<Type className="headline">{this.props.children}</Type>
 		);
 	}
 

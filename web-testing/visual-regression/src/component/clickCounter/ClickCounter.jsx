@@ -37,12 +37,10 @@ class ClickCounter extends Component {
 	}
 
 	_handleIncrement(event) {
-		event.preventDefault();
 		this.setState({ counter: this.state.counter + 1 });
 	}
 
 	_handleDecrement(event) {
-		event.preventDefault();
 		this.setState({ counter: this.state.counter - 1 });
 	}
 }

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node_modules/.bin/wdio wdio.conf.js",
+    "test": "node_modules/.bin/wdio wdio.conf.js",
+    "start": "npm test",
     "selenium": "node_modules/.bin/selenium-standalone install --drivers.firefox.version=0.23.0 && node_modules/.bin/selenium-standalone start --drivers.firefox.version=0.23.0"
   },
   "author": "",
