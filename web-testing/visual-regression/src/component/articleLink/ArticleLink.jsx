@@ -5,6 +5,8 @@ import { ThemeContext } from '../../context';
 import './articleLink.css';
 
 class ArticleLink extends Component {
+	static contextType = ThemeContext;
+
 	render() {
 		if (!this.props.post) {
 			return null;
@@ -25,6 +27,5 @@ class ArticleLink extends Component {
 		);
 	}
 }
-ArticleLink.contextType = ThemeContext;
 
 export default ArticleLink;
