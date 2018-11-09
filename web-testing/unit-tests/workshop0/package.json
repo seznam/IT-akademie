@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "test": "node_modules/.bin/jest --no-watchman",
-        "test:watch": "node_modules/.bin/jest ./__tests__/*.js --no-watchman --watchAll",
+        "test:watch": "node_modules/.bin/jest --no-watchman --watchAll",
         "stryker": "node_modules/.bin/stryker run",
         "lint": "node_modules/.bin/eslint -c ./.eslintrc.js --fix './**/*.js' --ignore-path ./.prettierignore"
     },
