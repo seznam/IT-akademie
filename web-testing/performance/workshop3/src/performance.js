@@ -35,7 +35,6 @@ class Performance {
 
 	async _getUrlPerformance(url, page) {
 		let requests = [];
-		let responseHandler = response => requests.push(response.request());
 
 		await page.coverage.startJSCoverage();
 		await page.coverage.startCSSCoverage();

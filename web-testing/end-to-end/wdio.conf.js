@@ -1,7 +1,3 @@
-require('babel-core/register')({
-	plugins: 'transform-es2015-modules-commonjs'
-});
-
 exports.config = {
 	specs: [
 		'specs/**/*E2E.js'
@@ -25,7 +21,7 @@ exports.config = {
 	waitforTimeout: 5000,
 	framework: 'jasmine',
 	jasmineNodeOpts: {
-		defaultTimeoutInterval: 60000
+		defaultTimeoutInterval: 30000
 	},
 	reporters: ['dot', 'spec'],
 	before: () => {
