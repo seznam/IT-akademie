@@ -1,3 +1,7 @@
+require('babel-core/register')({
+	plugins: 'transform-es2015-modules-commonjs'
+});
+
 exports.config = {
 	specs: [
 		'specs/**/*E2E.js'
