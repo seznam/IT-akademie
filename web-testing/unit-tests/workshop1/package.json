@@ -1,0 +1,32 @@
+{
+    "name": "web-testing",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "node_modules/.bin/jest --no-watchman",
+        "test:watch": "node_modules/.bin/jest ./__tests__/*.js --no-watchman --watchAll",
+        "stryker": "node_modules/.bin/stryker run",
+        "lint": "node_modules/.bin/eslint -c ./.eslintrc.js --fix './**/*.js' --ignore-path ./.prettierignore"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "babel-core": "^6.26.3",
+        "babel-eslint": "^10.0.1",
+        "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+        "eslint": "^5.8.0",
+        "eslint-config-last": "^0.0.5",
+        "eslint-config-prettier": "^3.1.0",
+        "eslint-plugin-jasmine": "^2.9.3",
+        "eslint-plugin-jest": "^21.24.1",
+        "eslint-plugin-prettier": "^3.0.0",
+        "fast-check": "^1.7.1",
+        "jest": "^23.6.0",
+        "prettier": "^1.15.1",
+        "stryker": "^0.30.1",
+        "stryker-api": "^0.21.4",
+        "stryker-javascript-mutator": "^0.11.2",
+        "stryker-jest-runner": "^1.2.5"
+    }
+}
