@@ -25,7 +25,7 @@ exports.config = {
 	waitforTimeout: 5000,
 	framework: 'jasmine',
 	jasmineNodeOpts: {
-		defaultTimeoutInterval: 60000
+		defaultTimeoutInterval: 30000
 	},
 	reporters: ['dot', 'spec'],
 	before: () => {

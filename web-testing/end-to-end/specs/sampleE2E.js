@@ -1,25 +1,27 @@
+import SeznamHome from './pages/SeznamHome';
+import SeznamSearchResults from './pages/SeznamSearchResults';
+
 describe('Seznam', () => {
 	beforeEach(() => {
 		browser.url('/');
 	});
 
 	it('can search for www.seznamzpravy.cz', () => {
-		browser.setValue('.input--hp-search', 'www.seznamzpravy.cz');
-		browser.click('.search-form__button');
+		SeznamHome.search('www.seznamzpravy.cz');
 
-		browser.waitForExist('.Result-title');
+		SeznamSearchResults.resultTitle().waitForExist();
 
-		browser.click('.Result-title');
+		SeznamSearchResults.resultTitle().click();
 
 		expect(browser.getTitle()).toEqual('Seznam Zprávy');
 	});
 
 	it('can display message when no search results found', () => {
-		browser.setValue('.input--hp-search', 'kjuifhcaiscdshklisfdgfjasbkjsk');
-		browser.click('.search-form__button');
+		SeznamHome.search('kjuifhcaiscdshklisfdgfjasbkjsk');
 
-		browser.waitForExist('.SimpleResult-title');
+		SeznamSearchResults.nothingFoundTitle().waitForExist();
 
-		expect(browser.getText('.SimpleResult-title')).toEqual('Bohužel jsem nic nenašel');
+		expect(SeznamSearchResults.nothingFoundTitle().getText())
+			.toEqual('Bohužel jsem nic nenašel');
 	});
 });
