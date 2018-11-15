@@ -9,7 +9,7 @@
   },
   "scripts": {
     "test": "node_modules/.bin/loki",
-    "start": "npm test",
+    "start": "npm run storybook",
     "report": "reg-cli .loki/current/ .loki/reference/ .loki/reg-diff/ -R ./report.html",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public"
