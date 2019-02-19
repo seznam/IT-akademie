@@ -28,10 +28,10 @@ export default class MainLayout extends React.Component {
 						</a>
 						<form className = 'tpl-main-layout-search-form' action = '/' method = 'get'>
 							<input
-									className = 'tpl-main-layout-search-input'
-									type = 'search'
-									name = 'q'
-									placeholder = 'Vyhledávání…'/>
+								className = 'tpl-main-layout-search-input'
+								type = 'search'
+								name = 'q'
+								placeholder = 'Vyhledávání…'/>
 							<button className = 'tpl-main-layout-search-button' type = 'submit'>Hledat</button>
 							<button className = 'tpl-main-layout-search-button' type = 'reset'>Vymazat</button>
 						</form>
@@ -41,7 +41,7 @@ export default class MainLayout extends React.Component {
 					{this.props.children}
 				</main>
 				<footer className = 'tpl-main-layout-footer'>
-					Seznam.cz &copy; 2016
+					Seznam.cz &copy; {new Date().getFullYear()}
 				</footer>
 			</div>
 		);

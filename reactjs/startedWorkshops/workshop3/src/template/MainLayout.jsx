@@ -36,7 +36,7 @@ export default class MainLayout extends React.Component {
 					{this.props.children}
 				</main>
 				<footer className = 'tpl-main-layout-footer'>
-					Seznam.cz &copy; 2016
+					Seznam.cz &copy; {new Date().getFullYear()}
 				</footer>
 			</div>
 		);
