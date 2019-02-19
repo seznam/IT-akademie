@@ -1,10 +1,8 @@
 require('babel-core/register.js')({
-	presets: [require('babel-preset-es2015'), require('babel-preset-react')]
+	presets: [require('babel-preset-env'), require('babel-preset-react')]
 });
 
 let gulp = require('gulp');
-let gutil = require('gulp-util');
-let babel = require('gulp-babel');
 let jasmine = require('gulp-jasmine');
 let karma = require('karma');
 let path = require('path');
@@ -14,14 +12,13 @@ let fs = require('fs');
 let less = require('gulp-less');
 let concatCss = require('gulp-concat-css');
 let gls = require('gulp-live-server');
-let watch = require('gulp-watch');
 
 try {
 	fs.mkdirSync('./dist');
-} catch (error) {}
+} catch (error) {} // eslint-disable-line no-empty
 try {
 	fs.mkdirSync('./dist/js');
-} catch (error) {}
+} catch (error) {} // eslint-disable-line no-empty
 
 let gulpConfig = {
 	onTerminate: () => {
@@ -43,83 +40,90 @@ function startKarmaServer(done, singleRun) {
 	}, done).start();
 }
 
-//run test
-gulp.task('test:jasmine', () =>
-	gulp.src('./src/**/*Spec.js')
-		.pipe(jasmine({ includeStackTrace: false }))
-);
+function testJasmine() {
+	return gulp
+		.src('./src/**/*Spec.js')
+		.pipe(jasmine({ includeStackTrace: false }));
+}
 
-gulp.task('bundle', function() {
-	var options = { debug: true, insertGlobals : false, paths: ['./', './src'], extensions: ['.jsx'] };
+function bundle() {
+	const options = {
+		debug: true,
+		insertGlobals: false,
+		paths: ['./', './src'],
+		extensions: ['.jsx']
+	};
 
-	return (
-		browserify(['./src/main.js'], options)
-			.transform(babelify.configure({
-				presets: ['es2015', 'react']
-			}))
-			.bundle()
-			.on('error', function(err) {
-				gutil.log(
-					gutil.colors.red("Browserify compile error:"),
-					err.message
-				);
-				this.emit('end');
-			})
-			.pipe(fs.createWriteStream('./dist/js/bundle.js'))
-	);
-});
+	return browserify(['./src/main.js'], options)
+		.transform(babelify.configure({
+			presets: ['env', 'react']
+		}))
+		.bundle()
+		.pipe(fs.createWriteStream('./dist/js/bundle.js'));
+}
 
-gulp.task('less', function() {
-	return (
-		gulp.src('./src/main.less')
-			.pipe(less({
-				paths: [path.join(__dirname, 'less', 'includes')]
-			}))
-			.pipe(concatCss('bundle.css'))
-			.pipe(gulp.dest('./dist/css/'))
-	);
-});
+function compileLess() {
+	return gulp
+		.src('./src/main.less')
+		.pipe(less({
+			paths: [path.join(__dirname, 'less', 'includes')]
+		}))
+		.pipe(concatCss('bundle.css'))
+		.pipe(gulp.dest('./dist/css/'));
+}
 
-gulp.task('html', function() {
-	return (
-		gulp.src('./src/**/*.html')
-			.pipe(gulp.dest('./dist'))
-	);
-});
+function copyHtml() {
+	return gulp
+		.src('./src/**/*.html')
+		.pipe(gulp.dest('./dist'));
+}
 
-gulp.task('test:karma', function(done) {
+function testKarma(done) {
 	startKarmaServer(done, true);
-});
+}
 
-gulp.task('server', function() {
+function server() {
 	gulpConfig.server = gls.static('dist', 8888);
 	gulpConfig.server.start();
-});
+}
 
-gulp.task('static', () => {
-	return gulp.src('./static/**/*')
-			.pipe(gulp.dest('./dist'));
-});
+function copyStatic() {
+	return gulp
+		.src('./static/**/*')
+		.pipe(gulp.dest('./dist'));
+}
 
-// -------------------------------------PRIVATE HELPER TASKS
-gulp.task('dev', ['bundle', 'less', 'html', 'static', 'server'], (done) => {
-	//startKarmaServer(done);
-
-	runOnChange('./src/**/*.less', ['less']);
-	runOnChange('./src/**/*.html', ['html']);
-	runOnChange(['./src/**/!(*Spec).{js,jsx}'], ['bundle']);
-	//runOnChange('./src/**/*.{js,jsx}', ['test:jasmine']);
-	runOnChange('./static/**/*', ['static']);
+function watch() {
+	gulp.watch('./src/**/*.less', compileLess);
+	gulp.watch('./src/**/*.html', copyHtml);
+	gulp.watch(['./src/**/!(*Spec).{js,jsx}'], bundle);
+	gulp.watch('./static/**/*', copyStatic);
 	gulp.watch(['dist/**/*.js', 'dist/**/*.css', 'dist/**/*.html'], (file) => {
 		gulpConfig.server.notify.apply(gulpConfig.server, [file]);
 	});
+}
 
-	function runOnChange(files, tasks) {
-		watch(files, () => {
-			gulp.start(tasks);
-		});
-	}
-});
+exports.dev = gulp.series(
+	bundle,
+	compileLess,
+	copyHtml,
+	copyStatic,
+	server,
+	watch
+);
+
+exports.test = gulp.series(
+	testKarma,
+	(done) => {
+		const { JSDOM } = require('jsdom');
+		const dom = new JSDOM('<!DOCTYPE html>');
+		global.window = dom.window;
+		global.document = dom.window.document;
+		global.navigator = dom.window.navigator;
+		done();
+	},
+	testJasmine
+);
 
 if (gulpConfig.onTerminate) {
 	process.on('SIGINT', gulpConfig.onTerminate.bind(null, 'SIGINT'));
