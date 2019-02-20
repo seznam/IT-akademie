@@ -21,7 +21,7 @@ const DATA = deepFreeze([
 		],
 		video: [
 			{
-				src: '//video.csfd.cz/files/videos/video/159/927/159927890_cc5e48.mp4',
+				src: '//video.csfd.cz/files/videos/157/706/157706208/159927890_ab7849.mp4',
 				width: 1702,
 				height: 720
 			}
@@ -50,7 +50,7 @@ const DATA = deepFreeze([
 		],
 		video: [
 			{
-				src: '//video.csfd.cz/files/videos/video/160/084/160084167_3143e7.mp4',
+				src: '//video.csfd.cz/files/videos/157/706/157706204/159926185_59e157.mp4',
 				width: 1694,
 				height: 720
 			}
@@ -74,7 +74,7 @@ const DATA = deepFreeze([
 		],
 		video: [
 			{
-				src: '//video.csfd.cz/files/videos/video/159/808/159808246_6bf364.mp4',
+				src: '//video.csfd.cz/files/videos/157/704/157704666/159808246_b3c97c.mp4',
 				width: 1431,
 				height: 720
 			}
@@ -98,9 +98,9 @@ const DATA = deepFreeze([
 		],
 		video: [
 			{
-				src: '//video.csfd.cz/files/videos/video/159/956/159956158_134e56.mp4',
-				width: 654,
-				height: 360
+				src: '//video.csfd.cz/files/videos/157/702/157702799/159662887_29c689.mp4',
+				width: 1322,
+				height: 720
 			}
 		],
 		date: '2015-09-24',
@@ -122,9 +122,9 @@ const DATA = deepFreeze([
 		],
 		video: [
 			{
-				src: '//video.csfd.cz/files/videos/video/160/275/160275767_443d6d.mp4',
-				width: 640,
-				height: 360
+				src: '//video.csfd.cz/files/videos/157/707/157707423/160078844_4bb4cb.mp4',
+				width: 1280,
+				height: 720
 			}
 		],
 		date: '2016-01-07',
@@ -146,8 +146,8 @@ const DATA = deepFreeze([
 		],
 		video: [
 			{
-				src: '//video.csfd.cz/files/videos/video/160/150/160150758_1cba26.mp4',
-				width: 1732,
+				src: '//video.csfd.cz/files/videos/157/707/157707087/160005321_b036b6.mp4',
+				width: 1736,
 				height: 720
 			}
 		],
