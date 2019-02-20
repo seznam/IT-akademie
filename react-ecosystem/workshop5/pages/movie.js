@@ -18,10 +18,12 @@ export default connect(
   };
 
   render() {
+    const {movie} = this.props;
+
     return (
       <DefaultTemplate query="">
         <Head>
-          <title>{this.props.movie.title} | SFlix</title>
+          <title>{movie ? `${movie.title} | ` : ''}SFlix</title>
         </Head>
 
         <MovieOrganism movie={this.props.movie}/>

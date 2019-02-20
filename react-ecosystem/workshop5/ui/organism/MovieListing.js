@@ -1,7 +1,12 @@
 import PropTypes from 'prop-types';
+import Loader from '~/ui/atom/Loader';
 import Movie from '~/ui/molecule/Movie';
 
 export default function MovieListing({movies}) {
+  if (!movies) {
+    return <Loader mode="small" layout="center"/>;
+  }
+
   return (
     <ul className="atm-none ogm-movie-listing">
       {movies.map(movie =>
@@ -22,5 +27,5 @@ export default function MovieListing({movies}) {
 MovieListing.propTypes = {
   movies: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
-  }).isRequired).isRequired,
+  }).isRequired),
 };

@@ -1,10 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Loader from '~/ui/atom/Loader';
 import Rating from '~/ui/atom/Rating';
 import Sizer from '~/ui/atom/Sizer';
 import '~/ui/organism/movie/movie.css';
 
-export default function MovieUI({movie, video, onRateMovie}) {
+export default function MovieUI({isLoading, movie, video, onRateMovie}) {
+  if (isLoading) {
+    return <Loader mode="small" layout="center"/>;
+  }
+
   return (
     <div className="ogm-movie">
       <div className="ogm-movie-video">
@@ -27,16 +32,17 @@ export default function MovieUI({movie, video, onRateMovie}) {
 }
 
 MovieUI.propTypes = {
+  isLoading: PropTypes.bool.isRequired,
   movie: PropTypes.shape({
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     rating: PropTypes.number.isRequired,
     actors: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
-  }).isRequired,
+  }),
   video: PropTypes.shape({
     src: PropTypes.string.isRequired,
     width: PropTypes.number.isRequired,
     height: PropTypes.number.isRequired,
-  }).isRequired,
+  }),
   onRateMovie: PropTypes.func.isRequired,
 };

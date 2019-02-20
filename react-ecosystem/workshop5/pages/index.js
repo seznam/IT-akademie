@@ -18,10 +18,10 @@ export default connect(
 
   static propTypes = {
     searchQuery: PropTypes.string.isRequired,
-    categories: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
+    categories: PropTypes.arrayOf(PropTypes.object.isRequired),
     movies: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.number.isRequired,
-    }).isRequired).isRequired,
+    }).isRequired),
   };
 
   render() {

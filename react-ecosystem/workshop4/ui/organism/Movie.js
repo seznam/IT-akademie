@@ -1,9 +1,14 @@
 import PropTypes from 'prop-types';
+import Loader from '~/ui/atom/Loader';
 import Rating from '~/ui/atom/Rating';
 import Sizer from '~/ui/atom/Sizer';
 import '~/ui/organism/movie.css';
 
 export default function Movie({movie}) {
+  if (!movie) {
+    return <Loader mode="small" layout="center"/>;
+  }
+
   return (
     <div className="ogm-movie">
       <div className="ogm-movie-video">
@@ -26,5 +31,5 @@ export default function Movie({movie}) {
 }
 
 Movie.propTypes = {
-  movie: PropTypes.object.isRequired,
+  movie: PropTypes.object,
 };
