@@ -3,13 +3,13 @@ import MovieListingAction from '~/ui/organism/movieListing/MovieListingAction';
 import DEFAULT_STATE from '~/ui/organism/movieListing/state';
 
 export default createReducer(DEFAULT_STATE, {
-  [MovieListingAction.movieListingFetchMovies](state) {
+  [MovieListingAction.movielistingFetchMovies](state) {
     return {
       ...state,
       isLoading: true,
     };
   },
-  [MovieListingAction.movieListingFetchMoviesDone](state, movies, error) {
+  [MovieListingAction.movielistingFetchMoviesDone](state, movies, error) {
     if (error) {
       return {
         ...state,

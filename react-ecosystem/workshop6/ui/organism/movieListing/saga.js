@@ -8,12 +8,12 @@ function *fetchMovies({payload: searchQuery}) {
       call(movieResource.searchMovies, searchQuery)
       :
       call(movieResource.fetchMovies);
-    yield put(MovieListingAction.movieListingFetchMoviesDone(movies));
+    yield put(MovieListingAction.movielistingFetchMoviesDone(movies));
   } catch (apiError) {
-    yield put(MovieListingAction.movieListingFetchMoviesDone(apiError));
+    yield put(MovieListingAction.movielistingFetchMoviesDone(apiError));
   }
 }
 
 export default function *movieListingSaga() {
-  yield takeLatest(MovieListingAction.movieListingFetchMovies, fetchMovies);
+  yield takeLatest(MovieListingAction.movielistingFetchMovies, fetchMovies);
 }
