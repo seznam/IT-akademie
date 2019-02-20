@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import { uiComponentHelper } from '../UIComponentHelper';
 import Rating from '../atom/Rating.jsx';
 import Sizer from '../atom/Sizer.jsx';
@@ -45,9 +46,10 @@ export default class Movie extends React.Component {
 			}, this.props.className) }>
 				<div className = 'ogm-movie-video'>
 					<Sizer
-							width = { movie.video[0].width }
-							height = { movie.video[0].height }
-							placeholder = { false }/>
+						width = { movie.video[0].width }
+						height = { movie.video[0].height }
+						placeholder = { false }
+					/>
 					<video className = 'ogm-movie-video-player' controls autoPlay>
 						<source src = { movie.video[0].src } type = 'video/mp4'/>
 					</video>

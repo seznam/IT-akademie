@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import MainLayout from '../template/MainLayout.jsx';
 import MovieListingOrganism from '../organism/MovieListing.jsx';
 
