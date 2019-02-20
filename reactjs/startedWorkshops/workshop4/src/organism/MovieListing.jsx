@@ -24,6 +24,8 @@ export default class MovieListing extends React.Component {
 		this.state = {
 			movies: []
 		};
+
+		this._movieModel = new MovieModel();
 	}
 
 	render() {

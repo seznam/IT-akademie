@@ -20,6 +20,7 @@ export default class Movie extends React.Component {
 	}
 
 	render() {
+		const { movie } = this.props;
 		return (
 			<article className = { uiComponentHelper.cssClasses({
 				'mol-movie': true
