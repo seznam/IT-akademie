@@ -11,10 +11,7 @@ export default function storeFactory(initialState) {
     applyMiddleware(sagaMiddleware),
   );
 
-  store.runSagaTask = () => {
-    store.sagaTask = sagaMiddleware.run(rootSaga);
-  };
+  store.sagaTask = sagaMiddleware.run(rootSaga);
 
-  store.runSagaTask();
   return store;
 }
