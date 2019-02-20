@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { uiComponentHelper } from '../UIComponentHelper';
 
 /**
@@ -6,27 +6,15 @@ import { uiComponentHelper } from '../UIComponentHelper';
  *
  * @class Sizer
  */
-export default function Sizer(props) {
+export default React.forwardRef(function Sizer({ width, height, placeholder, className }, ref) {
 	return (
 		<div
-				className = { uiComponentHelper.cssClasses({
-					'atm-sizer': true,
-					'atm-placeholder': props.placeholder
-				}, props.className) }
-				style = { { paddingTop: props.height / props.width * 100 + '%' } }/>
+			className = { uiComponentHelper.cssClasses({
+				'atm-sizer': true,
+				'atm-placeholder': placeholder
+			}, className || '') }
+			style = { { paddingTop: (height || 0) / (width || 0) * 100 + '%' } }
+			ref={ref}
+		/>
 	);
-}
-
-Sizer.propTypes = {
-	width:  PropTypes.number,
-	height:  PropTypes.number,
-	placeholder: PropTypes.bool,
-	className: PropTypes.string
-};
-
-Sizer.defaultProps = {
-	width: 0,
-	height: 0,
-	placeholder: false,
-	className: ''
-};
+});

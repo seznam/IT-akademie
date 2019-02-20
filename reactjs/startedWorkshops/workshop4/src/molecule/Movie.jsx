@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import { Link } from 'react-router';
 import { uiComponentHelper } from '../UIComponentHelper';
 import HtmlImage from '../atom/HtmlImage.jsx';
@@ -19,11 +20,6 @@ export default class Movie extends React.Component {
 	}
 
 	render() {
-		let movie = this.props.movie;
-		if (!movie) {
-			return null;
-		}
-
 		return (
 			<article className = { uiComponentHelper.cssClasses({
 				'mol-movie': true
@@ -31,10 +27,11 @@ export default class Movie extends React.Component {
 				<div className = 'mol-movie-content'>
 					<a className = 'mol-movie-image' href = { `/film/${movie.url}` }>
 						<HtmlImage
-								src = { movie.images[0].src }
-								width = { movie.images[0].width }
-								height = { movie.images[0].height }
-								layout = 'responsive'/>
+							src = { movie.images[0].src }
+							width = { movie.images[0].width }
+							height = { movie.images[0].height }
+							layout = 'responsive'
+						/>
 					</a>
 					<a className = 'mol-movie-title' href = { `/film/${movie.url}` }>
 						<h2 className = 'mol-movie-title-text'>{ movie.title }</h2>

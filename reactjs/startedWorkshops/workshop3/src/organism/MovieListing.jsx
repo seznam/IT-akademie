@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import { uiComponentHelper } from '../UIComponentHelper';
 import MovieModel from '../model/Movie';
 import Movie from '../molecule/Movie.jsx';

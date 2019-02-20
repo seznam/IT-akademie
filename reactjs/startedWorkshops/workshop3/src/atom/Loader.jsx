@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { uiComponentHelper } from '../UIComponentHelper';
 
 /**
@@ -7,13 +7,16 @@ import { uiComponentHelper } from '../UIComponentHelper';
  * @class Loader
  */
 
-export default function Loader(props) {
+export default React.forwardRef(function Loader(props, ref) {
 	return (
-		<div className = { uiComponentHelper.cssClasses({
-			'atm-loader': true,
-			['atm-loader-' + props.mode]: props.mode,
-			['atm-loader-' + props.layout]: props.layout
-		}, props.className) }>
+		<div
+			className = { uiComponentHelper.cssClasses({
+				'atm-loader': true,
+				['atm-loader-' + (props.mode || '')]: props.mode,
+				['atm-loader-' + (props.layout || '')]: props.layout
+			}, props.className || '') }
+			ref={ref}
+		>
 			<span/>
 			<span/>
 			<span/>
@@ -21,16 +24,4 @@ export default function Loader(props) {
 			<span/>
 		</div>
 	);
-}
-
-Loader.propTypes = {
-	mode: PropTypes.string,
-	layout: PropTypes.string,
-	className: PropTypes.string
-};
-
-Loader.defaultProps = {
-	mode: '',
-	layout: '',
-	className: ''
-};
+});

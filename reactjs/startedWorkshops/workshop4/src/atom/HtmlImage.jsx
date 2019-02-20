@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import Loader from './Loader.jsx';
 import Sizer from './Sizer.jsx';
 import { uiComponentHelper } from '../UIComponentHelper';
@@ -64,37 +65,40 @@ export default class HtmlImage extends React.Component {
 	render() {
 		return (
 			<div
-					ref = 'root'
-					className = { uiComponentHelper.cssClasses({
-						'atm-image': true,
-						'atm-overflow': true,
-						'atm-responsive': this.props.layout === 'responsive'
-					}, this.props.className) }
-					style = {this.props.layout !== 'responsive' ?
-						{
-							width: this.props.width || 'auto',
-							height: this.props.height || 'auto'
-						}
+				ref = 'root'
+				className = { uiComponentHelper.cssClasses({
+					'atm-image': true,
+					'atm-overflow': true,
+					'atm-responsive': this.props.layout === 'responsive'
+				}, this.props.className) }
+				style = {this.props.layout !== 'responsive' ?
+					{
+						width: this.props.width || 'auto',
+						height: this.props.height || 'auto'
+					}
 					:
-						null
-					}>
+					null
+				}
+			>
 				{this.props.layout === 'responsive' ?
 					<Sizer
-							width = { this.props.width }
-							height = { this.props.height }
-							placeholder = { !this.state.noloading }/>
-				:
+						width = { this.props.width }
+						height = { this.props.height }
+						placeholder = { !this.state.noloading }
+					/>
+					:
 					null
 				}
 				{this.state.noloading ?
 					<img
-							src = { this.props.src }
-							alt = { this.props.alt }
-							className = { uiComponentHelper.cssClasses({
-								'atm-fill': true,
-								'atm-loaded': this.state.noloading && this.state.visibleInViewport
-							}) }/>
-				:
+						src = { this.props.src }
+						alt = { this.props.alt }
+						className = { uiComponentHelper.cssClasses({
+							'atm-fill': true,
+							'atm-loaded': this.state.noloading && this.state.visibleInViewport
+						}) }
+					/>
+					:
 					<Loader mode = 'small' layout = 'center'/>
 				}
 			</div>

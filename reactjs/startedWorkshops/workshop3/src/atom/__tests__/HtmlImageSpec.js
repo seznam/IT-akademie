@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TestUtils from 'react-addons-test-utils';
-//import Sizer from '../Sizer.jsx';
+import TestUtils from 'react-dom/test-utils';
 import HtmlImage from '../HtmlImage.jsx';
 
 describe('HtmlImage component', () => {
@@ -14,11 +13,12 @@ describe('HtmlImage component', () => {
 		beforeEach(() => {
 			htmlImage = TestUtils.renderIntoDocument(
 				<HtmlImage
-						src = '//upload.wikimedia.org/wikipedia/commons/3/36/Hopetoun_falls.jpg'
-						width = {600}
-						height = {400}
-						layout = 'responsive'
-						className = 'userClass' />
+					src = '//upload.wikimedia.org/wikipedia/commons/3/36/Hopetoun_falls.jpg'
+					width = {600}
+					height = {400}
+					layout = 'responsive'
+					className = 'userClass'
+				/>
 			);
 			root = ReactDOM.findDOMNode(htmlImage);
 		});

@@ -1,23 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TestUtils from 'react-addons-test-utils';
+import TestUtils from 'react-dom/test-utils';
 import Loader from '../Loader.jsx';
-import { wrap } from 'react-stateless-wrapper';
 
 describe('Loader component', () => {
 
-	let loader = null;
 	let root = null;
-	let WrappedComponent = wrap(Loader);
 
 	beforeEach(() => {
-		loader = TestUtils.renderIntoDocument(
-			<WrappedComponent
-					mode = 'small'
-					layout = 'center'
-					className = 'userClass' />
+		const loaderRef = React.createRef();
+		TestUtils.renderIntoDocument(
+			<Loader
+				mode = 'small'
+				layout = 'center'
+				className = 'userClass'
+				ref={loaderRef}
+			/>
 		);
-		root = ReactDOM.findDOMNode(loader);
+		root = ReactDOM.findDOMNode(loaderRef.current);
 	});
 
 	it('should render right loader structure', () => {

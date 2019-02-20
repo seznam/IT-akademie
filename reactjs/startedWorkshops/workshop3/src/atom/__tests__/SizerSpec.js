@@ -1,24 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TestUtils from 'react-addons-test-utils';
+import TestUtils from 'react-dom/test-utils';
 import Sizer from '../Sizer.jsx';
-import { wrap } from 'react-stateless-wrapper';
 
 describe('Sizer component', () => {
 
-	let sizer = null;
 	let root = null;
-	let WrappedComponent = wrap(Sizer);
 
 	beforeEach(() => {
-		sizer = TestUtils.renderIntoDocument(
-			<WrappedComponent
-					width = {800}
-					height = {500}
-					placeholder = {true}
-					className = 'userClass'/>
+		const sizerRef = React.createRef();
+		TestUtils.renderIntoDocument(
+			<Sizer
+				width = {800}
+				height = {500}
+				placeholder = {true}
+				className = 'userClass'
+				ref={sizerRef}
+			/>
 		);
-		root = ReactDOM.findDOMNode(sizer);
+		root = ReactDOM.findDOMNode(sizerRef.current);
 	});
 
 	it('should render right sizer structure', () => {
