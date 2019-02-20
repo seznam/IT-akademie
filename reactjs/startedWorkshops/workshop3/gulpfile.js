@@ -82,9 +82,10 @@ function testKarma(done) {
 	startKarmaServer(done, true);
 }
 
-function server() {
+function server(done) {
 	gulpConfig.server = gls.static('dist', 8888);
 	gulpConfig.server.start();
+	done();
 }
 
 function copyStatic() {
