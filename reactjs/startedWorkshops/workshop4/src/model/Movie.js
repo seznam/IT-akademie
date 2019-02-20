@@ -115,9 +115,9 @@ const DATA = deepFreeze([
 		category: 3,
 		images: [
 			{
-				src: '//img.csfd.cz/files/images/film/photos/159/980/159980433_480525.jpg',
-				width: 2192,
-				height: 1156
+				src: '//img.csfd.cz/files/images/film/photos/160/305/160305574_de8cca.jpg',
+				width: 5400,
+				height: 3595
 			}
 		],
 		video: [

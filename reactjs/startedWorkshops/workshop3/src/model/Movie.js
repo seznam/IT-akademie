@@ -5,7 +5,7 @@ const DATA = deepFreeze([
 		id: 1,
 		title: 'Marťan',
 		url: 'martan',
-		rating: '86',
+		rating: 86,
 		category: 3,
 		images: [
 			{
@@ -21,7 +21,9 @@ const DATA = deepFreeze([
 		],
 		video: [
 			{
-				src: '//video.csfd.cz/files/videos/video/159/927/159927890_cc5e48.mp4'
+				src: '//video.csfd.cz/files/videos/video/159/927/159927890_cc5e48.mp4',
+				width: 1702,
+				height: 720
 			}
 		],
 		date: '2015-10-01',
@@ -48,7 +50,9 @@ const DATA = deepFreeze([
 		],
 		video: [
 			{
-				src: '//video.csfd.cz/files/videos/video/160/084/160084167_3143e7.mp4'
+				src: '//video.csfd.cz/files/videos/video/160/084/160084167_3143e7.mp4',
+				width: 1694,
+				height: 720
 			}
 		],
 		date: '2015-09-24',
@@ -70,7 +74,9 @@ const DATA = deepFreeze([
 		],
 		video: [
 			{
-				src: '//video.csfd.cz/files/videos/video/159/808/159808246_6bf364.mp4'
+				src: '//video.csfd.cz/files/videos/video/159/808/159808246_6bf364.mp4',
+				width: 1431,
+				height: 720
 			}
 		],
 		date: '2015-06-11',
@@ -92,7 +98,9 @@ const DATA = deepFreeze([
 		],
 		video: [
 			{
-				src: '//video.csfd.cz/files/videos/video/159/956/159956158_134e56.mp4'
+				src: '//video.csfd.cz/files/videos/video/159/956/159956158_134e56.mp4',
+				width: 654,
+				height: 360
 			}
 		],
 		date: '2015-09-24',
@@ -107,14 +115,16 @@ const DATA = deepFreeze([
 		category: 3,
 		images: [
 			{
-				src: '//img.csfd.cz/files/images/film/photos/159/980/159980433_480525.jpg',
-				width: 2192,
-				height: 1156
+				src: '//img.csfd.cz/files/images/film/photos/160/305/160305574_de8cca.jpg',
+				width: 5400,
+				height: 3595
 			}
 		],
 		video: [
 			{
-				src: '//video.csfd.cz/files/videos/video/160/275/160275767_443d6d.mp4'
+				src: '//video.csfd.cz/files/videos/video/160/275/160275767_443d6d.mp4',
+				width: 640,
+				height: 360
 			}
 		],
 		date: '2016-01-07',
@@ -136,7 +146,9 @@ const DATA = deepFreeze([
 		],
 		video: [
 			{
-				src: '//video.csfd.cz/files/videos/video/160/150/160150758_1cba26.mp4'
+				src: '//video.csfd.cz/files/videos/video/160/150/160150758_1cba26.mp4',
+				width: 1732,
+				height: 720
 			}
 		],
 		date: '2015-12-31',
@@ -147,7 +159,23 @@ const DATA = deepFreeze([
 ]);
 
 export default class Movie {
-	getMovies() {
-		return Promise.resolve(deepFreeze(clone(DATA)));
+	getMovies(query = null) {
+		let movies = clone(DATA);
+
+		if (query) {
+			query = query.toLowerCase();
+			movies = movies.filter((movie) => {
+				return (movie.title.toLowerCase().indexOf(query) > -1) ||
+						(movie.perex.toLowerCase().indexOf(query) > -1) ||
+						(movie.description.toLowerCase().indexOf(query) > -1)
+			});
+		}
+
+		return Promise.resolve(deepFreeze(movies));
+	}
+
+	getMovie(url) {
+		let movie = DATA.filter(movie => movie.url === url)[0] || null;
+		return Promise.resolve(deepFreeze(clone(movie)));
 	}
 }
