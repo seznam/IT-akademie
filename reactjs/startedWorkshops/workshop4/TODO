@@ -1,0 +1,18 @@
+1. src/atom/Rating.jsx
+1.1 vyrendrovat 5 hvězdiček, počet vyplněných hvězdiček bude odpovídat hodnocení filmu (Math.floor)
+2. src/molecule/Molecule.jsx
+2.1 použít komponentu Link z react-router místo <a> elementů
+3. src/template/MainLayout.jsx
+3.1 použít komponentu Link z react-router místo <a> elementů
+3.2 implementovat onSearch - při psaní do vyhledávacího pole nebo odeslání formuláře zablokovat odeslání a aktualizovat
+    query aktuální URL pomocí browserHistory.push(). Použít throttling.
+3.3 implementovat onClear - při stisku tlačítka Vymazat nastavit hodnotu vstupního vyhledávacího pole na prázdný
+    řetězec.
+4. src/model/Movie.js
+4.1 upravit getMovies() tak, aby metoda počkala náhodný počet milisekund (100 - 1000) před resolvnutím vráceného promise
+4.2 bonusová otázka: proč nenastává race condition a seznam filmů vždy reflektuje nejnovější zadanou hledanou frázi?
+
+=== bonus ===
+
+5. implementovat na výpisu filmů postranní menu s kategoriemi filmů, které umožní filtrovat výpis filmů dle kategorie a
+   zadané vyhledávací fráze současně.
