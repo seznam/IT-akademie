@@ -26,7 +26,7 @@ export default class MainLayout extends React.Component {
 						<a href = '/' className = 'tpl-main-layout-logo'>
 							<h1>SFlix</h1>
 						</a>
-						<form className = 'tpl-main-layout-search-form' action = '/hledani' method = 'get'>
+						<form className = 'tpl-main-layout-search-form' action = '/' method = 'get'>
 							<input className = 'tpl-main-layout-search-input' type = 'search' name = 'q' placeholder = 'Vyhledávání…'/>
 							<button className = 'tpl-main-layout-search-button' type = 'submit'>Hledat</button>
 							<button className = 'tpl-main-layout-search-button' type = 'reset'>Vymazat</button>
