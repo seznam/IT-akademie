@@ -1,0 +1,32 @@
+1. src/organism/MovieListing.jsx
+1.1 vytvořit instanci MovieModel
+1.2 v componentDidMount načíst seznam filmů z instance MovieModel, nastavit
+    state.movies pouze pokud je komponenta v DOM
+1.3 implementovat metodu render() - v div.ogm-movie-listing vyrendrovat každý
+    film pomocí komponenty src/molecule/Movie.jsx
+2. src/molecule/Movie.jsx
+2.1 nastavit odkaz na stránku filmu
+2.2 zobrazit obrázek pomocí komponenty src/atom/HtmlImage.jsx
+2.3 zobrazit titulek a perex filmu
+
+=== road to workshop 4 ===
+
+3. vytvořit src/page/Movie.jsx
+3.1 vyrendrovat src/template/MainLayout
+3.2 v props očekávat movieUrl: string, tuto prop zobrazit jako obsah
+4. npm install react-router@3
+5. src/main.js
+5.1 rendrovat Router
+5.2 pro routu / rendrovat src/page/MovieListing.jsx
+5.3 pro routu /film/:movieUrl rendrovat src/page/Movie.jsx
+6. page/MovieListing.jsx
+6.1 očekávat v props location: {query: {q: string}}, location.query.q odevzdat
+    do MovieListingOrganism jako prop query
+7. vytvořit src/organism/Movie.jsx
+7.1 podle propu movieUrl načíst z lokální instance MovieModel správný film při
+    mountu, ošetřit unmount race condition
+7.2 zobrazit a přehrát video trailer
+7.3 zobrazit nadpis filmu, hodnocení, popis a seznam herců
+7.4 nastylovat komponentu
+8. pro zobrazení hodnocení filmu vytvořit komponentu src/atom/Rating.jsx
+8.1 přesunout zobrazení hodnocení filmu z src/organism/Movie.jsx do src/atom/Rating.jsx
