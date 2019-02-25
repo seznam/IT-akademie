@@ -1,0 +1,12 @@
+1. util/__tests__/componentHelpers.js
+1.1 implementovat unit testy pro funkci getVisibilityRatio z util/componentHelpers.js
+2. vytvořit ui/atom/__tests__/Rating.js
+2.1 implementovat snapshot testy pro hodnocení {0, 5, 10, ..., 95, 100}
+3. vytvořit ui/atom/__tests__/Sizer.js
+3.1 implementovat snapshot testy pro rozměry {1×99, 2×98, 3×97, ..., 98×2, 99×2}
+4. vytvořit ui/atom/__tests__/SmartImage.js
+4.1 implementovat snapshot test pro nějaký obrázek, layout="responsive"
+5. vytvořit __mocks__/nextLinks.js (nutný předpoklad pro 6.)
+5.1 implementovat komponentu která zobrazí obsah v elementu <mock-link> a nastaní na něj svoje props
+6. vytvořit ui/molecule/__tests__/Movie.js
+6.1 implementovat snapshot test pro nějaký film
