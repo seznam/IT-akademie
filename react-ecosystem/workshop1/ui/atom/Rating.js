@@ -1,5 +1,6 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import React from 'react';
 import '~/ui/atom/ratingStar.css';
 
 const RATING_STARS = 5;

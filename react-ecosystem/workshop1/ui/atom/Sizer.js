@@ -1,5 +1,6 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import React from 'react';
 
 export default function Sizer({width, height, placeholder}) {
   return (
