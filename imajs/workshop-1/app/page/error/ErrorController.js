@@ -1,21 +1,20 @@
 import AbstractPageController from 'app/page/AbstractPageController';
 
 export default class ErrorController extends AbstractPageController {
+  static get $dependencies() {
+    return [];
+  }
 
-	static get $dependencies() {
-		return [];
-	}
+  constructor() {
+    super();
 
-	constructor() {
-		super();
+    this.status = 500;
+  }
 
-		this.status = 500;
-	}
-
-	load() {
-		return {
-			status: this.status,
-			error: this.params
-		};
-	}
+  load() {
+    return {
+      status: this.status,
+      error: this.params
+    };
+  }
 }

@@ -1,3 +1,1 @@
-
-export default class AbstractEntity {
-}
+export default class AbstractEntity {}

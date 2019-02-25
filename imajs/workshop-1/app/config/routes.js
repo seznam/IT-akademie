@@ -10,12 +10,11 @@ import NotFoundController from 'app/page/notFound/NotFoundController';
 import NotFoundView from 'app/page/notFound/NotFoundView';
 
 export default (ns, oc, config) => {
-	let router = oc.get(Router);
+  let router = oc.get(Router);
 
-	router
-		.add('home', '/', HomeController, HomeView)
-		.add('movie', '/film/:movieUrl', MovieController, MovieView)
-		.add(RouteNames.ERROR, '/error', ErrorController, ErrorView)
-		.add(RouteNames.NOT_FOUND, '/not-found', NotFoundController, NotFoundView);
-
+  router
+    .add('home', '/', HomeController, HomeView)
+    .add('movie', '/film/:movieUrl', MovieController, MovieView)
+    .add(RouteNames.ERROR, '/error', ErrorController, ErrorView)
+    .add(RouteNames.NOT_FOUND, '/not-found', NotFoundController, NotFoundView);
 };

@@ -5,31 +5,34 @@ import MovieEntity from 'app/model/movie/MovieEntity';
 import Movie from 'app/component/molecule/movie/Movie';
 
 export default class MovieListing extends AbstractComponent {
+  static get propTypes() {
+    return {
+      className: PropTypes.string,
+      movies: PropTypes.arrayOf(PropTypes.instanceOf(MovieEntity))
+    };
+  }
 
-	static get propTypes() {
-		return {
-			className: PropTypes.string,
-			movies: PropTypes.arrayOf(PropTypes.instanceOf(MovieEntity))
-		};
-	}
+  static get defaultProps() {
+    return {
+      className: ''
+    };
+  }
 
-	static get defaultProps() {
-		return {
-			className: ''
-		};
-	}
+  render() {
+    let movies = this.props.movies || [];
 
-	render() {
-		let movies = this.props.movies || [];
-
-		return (
-			<div className={this.cssClasses({
-				'ogm-movie-listing': true
-			}, true)}>
-				{movies.map(movie =>
-					<Movie key={movie.id} movie={movie}/>
-				)}
-			</div>
-		);
-	}
+    return (
+      <div
+        className={this.cssClasses(
+          {
+            'ogm-movie-listing': true
+          },
+          true
+        )}>
+        {movies.map(movie => (
+          <Movie key={movie.id} movie={movie} />
+        ))}
+      </div>
+    );
+  }
 }
