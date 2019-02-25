@@ -1,0 +1,23 @@
+1. npm i redux-actions
+2. vytvořit store/movieAction.js
+2.1 pomocí import {createActions} from 'redux-actions' vytvořit enum následujících redux akcí:
+    - FETCH_MOVIES_DONE
+    - FETCH_MOVIE_DONE
+    - FETCH_CATEGORIES_DONE
+    - SET_SEARCH_QUERY
+3. vytvořit store/initialState.js
+3.1 exportovat objekt s výchozím stavem aplikace:
+    {
+      movies: [],
+      categories: [],
+      movie: null,
+      searchQuery: '',
+    }
+4. store/reducer.js
+4.1 pomocí redux-create-fsa-reducer, store/initialState.js a store/movieAction.js implementovat reducer
+5. pages/index.js
+5.1 v getInitialProps nevracet načtená data, ale dispatchnout redux akce pro nastavení dat/stavu do reduxu
+5.2 pomocí import {connect} from 'react-redux' připojit komponentu na stav v redux store aplikace
+6. pages/movie.js
+6.1 v getInitialProps nevracet načtená data, ale dispatchnout redux akci pro nastavení dat do reduxu
+6.2 připojit komponentu na stav v redux store aplikace
