@@ -1,0 +1,5 @@
+1. ui/atom/SmartImage.js
+1.1 v render() použít observe() na získání reference na obalový element pomocí
+    metod _rootMounted a _rootUnmounted
+1.2 v render() zobrazit loader pokud není obrázek ještě načten (this.state.noloading je false)
+1.3 implementovat _checkVisibility podle pseudo-kódu v komentářích
