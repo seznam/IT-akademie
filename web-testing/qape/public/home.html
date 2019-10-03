@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #content {
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+            }
+
+            .green {
+                background-color: green;
+            }
+
+            .red {
+                background-color: red;
+            }
+
+            .orange {
+                background-color: orange;
+            }
+
+            .blue {
+                background-color: blue;
+            }
+
+            .status {
+                position: absolute;
+                text-align: center;
+                left: 0;
+                bottom: 0;
+                height: 10%;
+                width: 100%;
+            }
+
+            .buttons {
+                position: relative;
+                margin: auto;
+                max-width: 200px;
+                height: 50%;
+            }
+
+            button {
+                font-size: 16px;
+                color: white;
+                width: 100px;
+                height: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="content">
+            <div class="buttons">
+                <button onclick="hit('red')" class="red">Red</button><button onclick="hit('green')" class="green">Green</button><button onclick="hit('orange')" class="orange">Orange</button><button onclick="hit('blue')" class="blue">Blue</button>
+            </div>
+            <div id="status" class="status green">Everything is OK!</div>
+        </div>
+        <script>
+            window.addEventListener("error", function(error) {
+                var status = document.getElementById("status");
+
+                if (status.classList.contains("green")) {
+                    status.classList.remove("green");
+                    status.classList.add("red");
+                    status.textContent = error.message;
+                }
+            });
+
+            const DEADLY_COMBINATIONS = [
+                ["blue", "red"],
+                ["green", "red"],
+                ["orange", "red"],
+                ["red", "red"],
+                ["blue", "blue"],
+                ["green", "green"],
+                ["orange", "orange"],
+                ["blue", "green", "orange"],
+                ["orange", "green", "blue"],
+                ["blue", "orange", "green"],
+                ["blue", "green", "orange"]
+            ];
+
+            const hits = [];
+
+            function hit(color) {
+                hits.push(color);
+
+                checkError();
+            }
+
+            function checkError() {
+                for (var combo of DEADLY_COMBINATIONS) {
+                    if (combo.length <= hits.length) {
+                        var reducedHits = hits.slice(hits.length - combo.length);
+
+                        if (JSON.stringify(reducedHits) === JSON.stringify(combo)) {
+                            throw Error(`You hit deadly combo! (${JSON.stringify(combo)})`);
+                        }
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,10 +1,10 @@
 import { configure } from '@storybook/react';
-import 'loki/configure-react';
+import requireContext from 'require-context.macro';
 
-const req = require.context('../src/component', true, /\.stories\.js$/)
+const req = requireContext('../src/component', true, /\.stories\.js$/)
 
 function loadStories() {
-	req.keys().forEach(file => req(file));
+  req.keys().forEach(file => req(file));
 }
 
 configure(loadStories, module);

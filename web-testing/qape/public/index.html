@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #content {
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+            }
+
+            h1 {
+                color: black;
+            }
+
+            .login-form {
+                position: relative;
+                margin: auto;
+                max-width: 300px;
+            }
+
+            .button {
+                background-color: #f44336;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                width: 100%;
+            }
+
+            .input {
+                font-size: 16px;
+            }
+
+            .input > input {
+                width: 100%;
+                padding: 12px 20px;
+                box-sizing: border-box;
+                margin: 8px 0;
+                font-size: 16px;
+            }
+
+            .green {
+                background-color: green;
+            }
+
+            .red {
+                background-color: red;
+            }
+
+            .status {
+                position: absolute;
+                text-align: center;
+                left: 0;
+                bottom: 0;
+                height: 10%;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="content">
+            <form id="login-form" class="login-form">
+                <h1>Login Page</h1>
+                <div class="input">
+                    <label class="input-label">Username</label>
+                    <input id="username" type="text" class="input-field" />
+                </div>
+                <div class="input">
+                    <label class="input-label">Password</label>
+                    <input id="password" type="password" class="input-field" />
+                </div>
+                <input type="submit" value="Login" class="button" />
+            </form>
+            <div id="status" class="status green">Everything is OK!</div>
+        </div>
+        <script>
+            window.addEventListener("error", function(error) {
+                var status = document.getElementById("status");
+
+                if (status.classList.contains("green")) {
+                    status.classList.remove("green");
+                    status.classList.add("red");
+                    status.textContent = error.message;
+                }
+            });
+
+            var form = document.getElementById("login-form");
+
+            form.addEventListener("submit", function(e) {
+                e.preventDefault();
+
+
+                var username = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+
+                if (username !== "filip" || password !== "1234") {
+                    throw Error(`Wrong username or password!`);
+                } else {
+                    window.location.href = "home.html";
+                }
+            });
+        </script>
+    </body>
+</html>

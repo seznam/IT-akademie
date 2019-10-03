@@ -1,57 +1,45 @@
 {
-  "name": "storybook",
+  "name": "visual-regression2",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "16.6.1",
-    "react-dom": "16.6.1",
-    "react-scripts": "2.0.4"
+    "react": "16.9.0",
+    "react-dom": "16.9.0",
+    "react-scripts": "3.1.1"
   },
   "scripts": {
-    "test": "node_modules/.bin/loki",
-    "start": "npm run storybook",
-    "report": "reg-cli .loki/current/ .loki/reference/ .loki/reg-diff/ -R ./report.html",
-    "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --watchAll",
+    "eject": "react-scripts eject",
+    "storyshots": "jest --config storyshots.config.json",
+    "storybook": "NODE_ENV=development start-storybook -p 9009 -s public",
+    "build-storybook": "NODE_ENV=development build-storybook -s public"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "devDependencies": {
-    "@storybook/addon-actions": "4.0.4",
-    "@storybook/addon-links": "4.0.4",
-    "@storybook/addon-viewport": "4.0.4",
-    "@storybook/addons": "4.0.4",
-    "@storybook/react": "4.0.4",
-    "babel-core": "6.26.3",
-    "babel-runtime": "6.26.0",
-    "jest": "23.6.0",
-    "loki": "0.13.0",
-    "reg-cli": "0.13.0-beta.1"
-  },
-  "loki": {
-    "configurations": {
-      "chrome.laptop": {
-        "target": "chrome.app",
-        "width": 1366,
-        "height": 768,
-        "deviceScaleFactor": 1,
-        "mobile": false,
-        "fitWindow": false
-      },
-      "chrome.iphone7": {
-        "target": "chrome.app",
-        "preset": "iPhone 7"
-      }
-    }
-  },
-  "moduleRoots": [
-    "./"
-  ]
+    "@storybook/addon-actions": "5.1.11",
+    "@storybook/addon-links": "5.1.11",
+    "@storybook/addon-storyshots": "5.2.1",
+    "@storybook/addon-storyshots-puppeteer": "5.2.1",
+    "@storybook/addon-viewport": "5.1.11",
+    "@storybook/addons": "5.1.11",
+    "@storybook/react": "5.1.11",
+    "react-test-renderer": "16.9.0",
+    "require-context.macro": "1.2.1"
+  }
 }
