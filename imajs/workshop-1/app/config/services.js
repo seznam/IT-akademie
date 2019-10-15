@@ -13,8 +13,20 @@ export default (ns, oc, config) => {
   $window.bindEventListener($window.getWindow(), 'error', event => {
     let error = event.error;
 
+    if (!error) {
+      return;
+    }
+
     $router.handleError({ error }).catch(fatalError => {
       config.$IMA.fatalErrorHandler(fatalError);
     });
   });
+
+  $window.bindEventListener(
+    $window.getWindow(),
+    'unhandledrejection',
+    event => {
+      console.log(event);
+    }
+  );
 };
