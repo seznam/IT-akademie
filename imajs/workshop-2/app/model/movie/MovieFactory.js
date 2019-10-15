@@ -43,6 +43,5 @@ export default class MovieFactory {
    */
   createEntities(entitiesData) {
     return entitiesData.map(entityData => this.createEntity(entityData));
-    // WORKSHOP: implement
   }
 }
