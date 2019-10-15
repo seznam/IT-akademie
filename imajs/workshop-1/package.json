@@ -21,13 +21,16 @@
     "JavaScript"
   ],
   "author": "Miroslav Jancarik <miroslav.jancarik@firma.seznam.cz>",
-  "contributors": [{
-    "name": "Martin Urban",
-    "email": "martin.urban@firma.seznam.cz"
-  }, {
-    "name": "Martin Jurča",
-    "email": "martin.jurca@firma.seznam.cz"
-  }],
+  "contributors": [
+    {
+      "name": "Martin Urban",
+      "email": "martin.urban@firma.seznam.cz"
+    },
+    {
+      "name": "Martin Jurča",
+      "email": "martin.jurca@firma.seznam.cz"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/seznam/IMA.js-skeleton.git"
@@ -37,37 +40,38 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "babel-eslint": "10.0.1",
+    "babel-eslint": "10.0.3",
     "enzyme": "3.9.0",
     "enzyme-adapter-react-16": "1.9.1",
     "enzyme-to-json": "^3.3.5",
     "eslint": "5.14.1",
     "eslint-config-prettier": "4.0.0",
     "eslint-plugin-jasmine": "2.10.1",
-    "eslint-plugin-jest": "22.3.0",
+    "eslint-plugin-jest": "22.3.2",
     "eslint-plugin-prettier": "3.0.1",
     "eslint-plugin-react": "7.12.4",
-    "ima-examples": "^0.16.0",
+    "ima-examples": "^0.16.3",
     "ima-gulp-task-loader": "^0.16.0",
-    "ima-gulp-tasks": "^0.16.3",
-    "jest": "24.1.0",
+    "ima-gulp-tasks": "^0.16.4",
+    "jest": "24.9.0",
+    "npm-check-updates": "^3.1.24",
     "prettier": "1.16.4"
   },
   "dependencies": {
     "body-parser": "1.18.3",
-    "compression": "1.7.3",
+    "compression": "1.7.4",
     "cookie-parser": "1.4.4",
     "express": "4.16.4",
     "helmet": "^3.15.1",
-    "ima": "^0.16.2",
-    "ima-plugin-rest-client": "0.6.0",
-    "ima-server": "^0.16.0",
-    "ima-ui-atoms": "1.2.9",
+    "ima": "^0.16.10",
+    "ima-plugin-rest-client": "^0.6.0",
+    "ima-server": "^0.16.3",
+    "ima-ui-atoms": "^1.2.10",
     "method-override": "3.0.0",
     "multer": "^1.4.1",
     "prop-types": "15.7.2",
-    "react": "16.8.3",
-    "react-dom": "16.8.3",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
     "express-http-proxy": "^1.0.7",
     "serve-favicon": "2.5.0"
   }
