@@ -1,0 +1,43 @@
+1. Loading the movie list
+1.a inspect app/model/movie/MovieResource.js, the getMovies(query) method is already implemented
+1.b open app/movel/movie/MovieFactory.js
+1.c implement the createEntity() method to return a MovieEntity (already imported) instance
+1.d implement the createEntities() method to convert the array of entity data into array of entities using the
+    createEntity() method
+1.e the home page should now display a list of movies
+
+2. Improving the movie listing and linking to the movie detail page
+2.a open app/component/molecule/movie/Movie.jsx
+2.b update the markup according the instructions in the comments
+2.c the movie listing will look much better now, and we are linking each movie to its movie detail page!
+
+3. Implementing the movie detail page
+3.a open app/model/movie/MovieResoure.js
+3.b implement the getMovie(url) method as instructed in the comments. The url argument will be a URL slug for the movie
+    to retrieve
+3.c open app/page/movie/MovieController.js
+3.d implement the load() method as instructed in the comments
+3.e open app/component/atom/rating/Rating.jsx
+3.f implement the render() method as instructed in the comments
+3.g the movie detail page is now implemented
+
+4. Live search at the movie listing page
+4.a open app/config/routes.js
+4.b add the { onlyUpdate: true } configuration to the home route
+4.c open app/page/home/HomeController.js
+4.d create a new method named loadState
+4.e move the contents of the load() method to the loadState() method
+4.f make the load() method call the loadState() method and return the result
+4.g add the update() method that calls the loadState() method and returns the result
+
+5. Improving the image loading UX using the ima-ui-atoms package
+5.a open app/build.js
+5.b add './node_modules/ima-ui-atoms/dist/*.less' to the less array after the './app/assets/less/layout.less' item
+5.c add 'ima-ui-atoms' and 'infinite-circle' to the common array in the vendors object
+5.d open app/config/bind.js
+5.e import UIComponentHelper from 'ima-ui-atoms'
+5.f add the $UIComponentHelper: oc.get(UIComponentHelper) line to the $Utils object
+5.g open app/component/molecule/movie/Movie.jsx
+5.h import the Image component from 'ima-ui-atoms'
+5.i replace the <img> element with the <Image> component, add the layout="responsive" prop
+5.j we should be getting a loading placeholder and animation for our images, that are now lazy-loaded as well!
