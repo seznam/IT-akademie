@@ -20,6 +20,7 @@ export default class Rating extends AbstractComponent {
   }
 
   render() {
+    return null
     // WORKSHOP: implement
     /*
 		stars <- []
