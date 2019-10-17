@@ -1,6 +1,6 @@
 1. Loading the movie list
 1.a inspect app/model/movie/MovieResource.js, the getMovies(query) method is already implemented
-1.b open app/movel/movie/MovieFactory.js
+1.b open app/model/movie/MovieFactory.js
 1.c implement the createEntity() method to return a MovieEntity (already imported) instance
 1.d implement the createEntities() method to convert the array of entity data into array of entities using the
     createEntity() method
