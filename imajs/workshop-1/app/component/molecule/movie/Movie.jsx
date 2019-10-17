@@ -39,12 +39,14 @@ export default class Movie extends AbstractComponent {
 					a[class="mol-movie-image"][href=link:movie{movieUrl=movie.url}]
 					 */
           }
-          <img
-            className="mol-movie-image-img"
-            src={movie.images[0].src}
-            width={movie.images[0].width}
-            height={movie.images[0].height}
-          />
+          <a className="mol-movie-image" href={this.link('movie', {movieUrl: movie.url})}>
+            <img
+              className="mol-movie-image-img"
+              src={movie.images[0].src}
+              width={movie.images[0].width}
+              height={movie.images[0].height}
+            />
+          </a>
           {
             // WORKSHOP: implement
             /*
@@ -54,6 +56,9 @@ export default class Movie extends AbstractComponent {
 							movie.title
 					 */
           }
+          <a className="mol-movie-title" href={this.link('movie', {movieUrl: movie.url})}>
+            <h2 className='mol-movie-title-text'>{movie.title}</h2>
+          </a>
           <p className="mol-movie-perex">{movie.perex}</p>
         </div>
       </article>
