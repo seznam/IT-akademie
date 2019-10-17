@@ -22,7 +22,7 @@ export default class MovieFactory {
    * @return {MovieEntity}
    */
   createEntity(entityData) {
-    return new MovieEntity(entityData);
+    // WORKSHOP: implement
   }
 
   /**
@@ -42,6 +42,6 @@ export default class MovieFactory {
    * @return {MovieEntity[]}
    */
   createEntities(entitiesData) {
-    return entitiesData.map(this.createEntity.bind(this))
+    // WORKSHOP: implement
   }
 }
