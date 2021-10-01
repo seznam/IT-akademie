@@ -38,9 +38,6 @@ export default {
     const { environment, ...restProps } = widget.props;
 
     return {
-      isModalVisible: false,
-      error: null,
-      user: null,
       ...restProps,
     };
   },
