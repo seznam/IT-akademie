@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script>
+      window.__merkur_dev__ = window.__merkur_dev__ || {};
+      window.__merkur_dev__.webSocketOptions = {
+        url: `ws://localhost:${<%- process.env.MERKUR_PLAYGROUND_LIVERELOAD_PORT %>}`
+      };
+    </script>
+    <script src="/@merkur/tools/static/livereload.js"></script>
+    <% assets.forEach((asset) => { %>
+    <%if (asset.type === 'stylesheet') { %>
+    <link rel='stylesheet' href='<%= asset.source %>' />
+    <% } %>
+    <%if (asset.type === 'script') { %>
+    <%if (typeof asset.source === 'string') { %>
+    <script src='<%= asset.source %>' defer='true'></script>
+    <% } %>
+    <%if (typeof asset.source === 'object') { %>
+    <script src='<%= asset.source.es9 %>' defer='true'></script>
+    <% } %>
+    <% } %>
+    <% }); %>
+    <title>Merkur - login</title>
+    <style>
+      html, body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+
+      .placeholder {
+        background: #e9ecef;
+      }
+
+      .menu {
+        display: flex;
+        align-items: center;
+        justify-content: stretch;
+      }
+
+      .menu > .placeholder {
+        height: 30px;
+        width: 120px;
+        margin: 5px 12px 5px 0;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #e9ecef;
+        margin: 0.5rem 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div style="margin: 0 auto; max-width: 980px;">
+      <div class="placeholder" style="height: 40px; margin: 20px 0; width: 230px;"></div>
+      <hr>
+      <div class="menu">
+        <div class="placeholder"></div>
+        <div class="placeholder"></div>
+        <div class="placeholder"></div>
+        <div style="flex-grow: 1;"></div>
+
+        <!-- Merkur VIEW -->
+        <div class="main-view"><%- html %></div>
+        <!-- Merkur VIEW -->
+      </div>
+      <hr>
+      <div class="article" style="margin-top: 20px;">
+        <div class="placeholder" style="height: 350px; width: 100%;"></div>
+        <div style="display: flex; flex-wrap: wrap;">
+          <div class="placeholder" style="height: 50px; width: 12%; margin: 20px 12px 20px 0;"></div>
+          <div class="placeholder" style="height: 50px; width: 50%; margin: 20px 12px 20px 0;"></div>
+          <div class="placeholder" style="height: 50px; width: 25%; margin: 20px 12px 20px 0;"></div>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; max-width: 800px;">
+          <div class="placeholder" style="height: 20px; width: 25%; margin: 4px 10px 4px 0;"></div>
+          <div class="placeholder" style="height: 20px; width: 10%; margin: 4px 10px 4px 0;"></div>
+          <div class="placeholder" style="height: 20px; width: 12%; margin: 4px 10px 4px 0;"></div>
+          <div class="placeholder" style="height: 20px; width: 35%; margin: 4px 10px 4px 0;"></div>
+          <div class="placeholder" style="height: 20px; width: 25%; margin: 4px 10px 4px 0;"></div>
+          <div class="placeholder" style="height: 20px; width: 40%; margin: 4px 10px 4px 0;"></div>
+          <div class="placeholder" style="height: 20px; width: 12%; margin: 4px 10px 4px 0;"></div>
+          <div class="placeholder" style="height: 20px; width: 10%; margin: 4px 10px 4px 0;"></div>
+          <div class="placeholder" style="height: 20px; width: 12%; margin: 4px 10px 4px 0;"></div>
+          <div class="placeholder" style="height: 20px; width: 40%; margin: 4px 10px 4px 0;"></div>
+          <div class="placeholder" style="height: 20px; width: 35%; margin: 4px 10px 4px 0;"></div>
+        </div>
+        <br>
+        <div style="display: flex; flex-wrap: wrap; max-width: 800px;">
+          <div class="placeholder" style="height: 20px; width: 25%; margin: 4px 10px 4px 0;"></div>
+          <div class="placeholder" style="height: 20px; width: 10%; margin: 4px 10px 4px 0;"></div>
+          <div class="placeholder" style="height: 20px; width: 35%; margin: 4px 10px 4px 0;"></div>
+          <div class="placeholder" style="height: 20px; width: 25%; margin: 4px 10px 4px 0;"></div>
+          <div class="placeholder" style="height: 20px; width: 12%; margin: 4px 10px 4px 0;"></div>
+          <div class="placeholder" style="height: 20px; width: 10%; margin: 4px 10px 4px 0;"></div>
+          <div class="placeholder" style="height: 20px; width: 12%; margin: 4px 10px 4px 0;"></div>
+          <div class="placeholder" style="height: 20px; width: 35%; margin: 4px 10px 4px 0;"></div>
+          <div class="placeholder" style="height: 20px; width: 25%; margin: 4px 10px 4px 0;"></div>
+          <div class="placeholder" style="height: 20px; width: 10%; margin: 4px 10px 4px 0;"></div>
+          <div class="placeholder" style="height: 20px; width: 12%; margin: 4px 10px 4px 0;"></div>
+          <div class="placeholder" style="height: 20px; width: 35%; margin: 4px 10px 4px 0;"></div>
+          <div class="placeholder" style="height: 20px; width: 25%; margin: 4px 10px 4px 0;"></div>
+          <div class="placeholder" style="height: 20px; width: 40%; margin: 4px 10px 4px 0;"></div>
+          <div class="placeholder" style="height: 20px; width: 12%; margin: 4px 10px 4px 0;"></div>
+          <div class="placeholder" style="height: 20px; width: 10%; margin: 4px 10px 4px 0;"></div>
+          <div class="placeholder" style="height: 20px; width: 12%; margin: 4px 10px 4px 0;"></div>
+          <div class="placeholder" style="height: 20px; width: 40%; margin: 4px 10px 4px 0;"></div>
+          <div class="placeholder" style="height: 20px; width: 35%; margin: 4px 10px 4px 0;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Merkur SLOT -->
+    <div class="modal-slot">
+      <%- widgetProperties && widgetProperties.slots && widgetProperties.slots.modal.html %>
+    </div>
+    <!-- Merkur SLOT -->
+
+    <script>
+      window.addEventListener('load', function () {
+        __merkur__.create(<%- JSON.stringify(widgetProperties) %>)
+          .then(function (widget) {
+            widget.containerSelector = '.main-view';
+            widget.slots.modal.containerSelector = '.modal-slot';
+
+            widget.mount();
+          });
+      });
+    </script>
+  </body>
+
+</html>

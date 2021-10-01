@@ -1,0 +1,55 @@
+{
+  "compilerOptions": {
+    "checkJs": false,
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "target": "es2020",
+    "module": "es2015",
+    "baseUrl": ".",
+    "paths": {
+      "#/*": [
+        "src/*"
+      ],
+      "@merkur/core/*": [
+        "node_modules/@merkur/core/lib/index.es5/*"
+      ],
+      "@merkur/plugin-component/*": [
+        "node_modules/@merkur/plugin-component/lib/index.es5/*"
+      ],
+      "@merkur/plugin-event-emitter/*": [
+        "node_modules/@merkur/plugin-event-emitter/lib/index.es5/*"
+      ],
+      "@merkur/plugin-http-client/*": [
+        "node_modules/@merkur/plugin-http-client/lib/index.es5/*"
+      ],
+      "@merkur/plugin-error/*": [
+        "node_modules/@merkur/plugin-error/lib/index.es5/*"
+      ],
+      "@merkur/plugin-router/*": [
+        "node_modules/@merkur/plugin-router/lib/index.es5/*"
+      ]
+    }
+  },
+  "exclude": [
+    "dist",
+    "node_modules",
+    "build",
+    ".vscode",
+    ".nuxt",
+    "coverage",
+    "jspm_packages",
+    "tmp",
+    "temp",
+    "bower_components",
+    ".npm",
+    ".yarn"
+  ],
+  "typeAcquisition": {
+    "enable": true,
+    "include": [
+      "preact",
+      "jest",
+      "testing-library__jest-dom"
+    ]
+  }
+}
