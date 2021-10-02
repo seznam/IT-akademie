@@ -4,7 +4,7 @@ import '../src/client';
 // receive widget properties for creating our Merkur widget instance
 import widgetProperties from '../src/widget';
 
-// import { loginApi } from '../src/lib/utils';
+import { loginApi } from '../src/lib/utils';
 
 // helper method for creating storybook loader, which async creates our widget instance.
 import { createWidgetLoader } from '@merkur/tool-storybook';
@@ -27,10 +27,10 @@ const loaders = [
 // if you need Context in React or Preact widget you must define Context Provider.
 const decorators = [
    (Story, { args: { widget }}) => {
-	  //  widget = {
-		//    ...widget,
-		//    ...loginApi()
-	  //  };
+	   widget = {
+		   ...widget,
+		   ...loginApi()
+	   };
 
     return (
       <WidgetContext.Provider value={widget}>

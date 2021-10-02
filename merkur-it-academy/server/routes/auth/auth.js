@@ -11,20 +11,6 @@ const UserDB = require('../../mocks/users.json');
 
 const router = express.Router();
 
-function userResponse(res, user) {
-  const userCopy = { ...user };
-  delete userCopy.password;
-
-  return res
-    .status(200)
-    .cookie(...createAuthCookie(user.username))
-    .json({
-      data: {
-        user: userCopy,
-      },
-    });
-}
-
 router
   .get('/login', async (req, res) => {
     try {
