@@ -3,7 +3,9 @@ const { createCacheKey } = require('@merkur/tool-webpack');
 function applyBabelLoader(config, { isProduction, environment, cache }) {
   config.module.rules.push({
     test: /\.(js|ts|tsx|mjs|jsx)$/,
-    exclude: /node_modules\/(?!(abort-controller|event-target-shim)\/).*/,
+    exclude: (modulePath) =>
+      /node_modules/.test(modulePath) &&
+      !/node_modules\/(abort-controller|event-target-shim)/.test(modulePath),
     use: {
       loader: 'babel-loader',
       options: {
@@ -20,7 +22,7 @@ function applyBabelLoader(config, { isProduction, environment, cache }) {
         cacheIdentifier: createCacheKey(
           environment,
           config?.name,
-          ...cache?.versionDependencies
+          ...(cache?.versionDependencies ?? [])
         ),
         cacheDirectory: true,
         cacheCompression: false,
