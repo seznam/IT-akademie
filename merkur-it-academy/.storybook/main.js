@@ -1,14 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-
 const { applyStyleLoaders, pipe } = require('@merkur/tool-webpack');
 const { applyBabelLoader } = require('../tools/babelLoaders');
 const { applyAliases } = require('../tools/utilityLoaders');
-
-// Has to be required for storybook to work
-require(path.resolve('./', 'webpack.config.js'));
 
 function insertAfterLastAtStorybookEntry(entries, entry) {
 	let lastAtStorybookIndex = entries.length - 1;
@@ -62,20 +57,13 @@ module.exports = {
 			useLessLoader: true,
 		  });
 	},
-  stories: [
-    '../src/**/*.stories.mdx',
-    '../src/**/*.stories.@(js|jsx|ts|tsx)'
-  ],
+	stories: [
+		path.resolve('./src/**/*.stories.@(js|jsx|mdx)').replace(/\\/g, '/')
+	],
   addons: [
-	'storybook-addon-outline',
-	'storybook-addon-pseudo-states',
     {
-			name: '@storybook/addon-essentials',
-			options: {
-				measure: false
-			}
+			name: '@storybook/addon-essentials'
 		},
-    '@whitespace/storybook-addon-html',
 	],
   core: {
     builder: 'webpack5'

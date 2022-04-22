@@ -2,9 +2,18 @@ import cn from 'classnames';
 
 import './textButton.less';
 
-export default function TextButton({ children, className, ...restProps }) {
+export default function TextButton({
+  children,
+  className,
+  type = 'button',
+  ...restProps
+}) {
   return (
-    <button className={cn('m-text-button', className)} {...restProps}>
+    <button
+      type={type}
+      className={cn('m-text-button', className)}
+      {...restProps}
+    >
       {children}
     </button>
   );

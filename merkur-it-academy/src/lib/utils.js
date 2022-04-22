@@ -1,3 +1,5 @@
+const BASE_API_URL = 'http://localhost:4444';
+
 async function mapViews(widget, factoryFn, callback) {
   const { View, slots = {} } = await factoryFn(widget);
   const { containerSelector } = widget;

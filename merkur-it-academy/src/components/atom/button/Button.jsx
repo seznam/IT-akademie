@@ -8,11 +8,13 @@ export default function Button({
   children,
   primary = false,
   isLoading = false,
+  type = 'button',
   className,
   ...restProps
 }) {
   return (
     <button
+      type={type}
       className={cn(
         {
           ['m-button']: true,

@@ -16,7 +16,7 @@ describe('Widget', () => {
           "message": null,
           "status": null,
         },
-        "html": "<div class=\\"m-merkur-login\\"><div class=\\"m-login-button\\"><button disabled class=\\"m-text-button\\">Sign in</button></div></div>",
+        "html": "<div class=\\"m-merkur-login\\"><div class=\\"m-login__button\\"><button type=\\"button\\" disabled class=\\"m-text-button\\">Sign in</button></div></div>",
         "name": "merkur-login",
         "props": Object {
           "environment": Object {

@@ -20,7 +20,7 @@
     <script src='<%= asset.source %>' defer='true'></script>
     <% } %>
     <%if (typeof asset.source === 'object') { %>
-    <script src='<%= asset.source.es9 %>' defer='true'></script>
+    <script src='<%= asset.source.es11 %>' defer='true'></script>
     <% } %>
     <% } %>
     <% }); %>
@@ -126,6 +126,8 @@
           .then(function (widget) {
             widget.containerSelector = '.main-view';
             widget.slots.modal.containerSelector = '.modal-slot';
+
+            window.__widget = widget;
 
             widget.mount();
           });

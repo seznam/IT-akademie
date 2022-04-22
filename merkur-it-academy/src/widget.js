@@ -1,3 +1,4 @@
+import { bindWidgetToFunctions } from '@merkur/core';
 import { componentPlugin } from '@merkur/plugin-component';
 import { errorPlugin } from '@merkur/plugin-error';
 import { eventEmitterPlugin } from '@merkur/plugin-event-emitter';
@@ -46,5 +47,5 @@ export default {
     setDefaultConfig(widget, {
       transformers: [transformBody(), transformQuery()],
     });
-  }
+  },
 };

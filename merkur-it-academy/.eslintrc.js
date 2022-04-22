@@ -2,6 +2,12 @@ let config = require('@merkur/tools/eslint.config');
 
 module.exports = {
   ...config,
+  ignorePatterns: [
+    '.vscode',
+    '**/node_modules/**',
+    '**/dist/**',
+    '**/build/**',
+  ],
   rules: {
     ...config.rules,
     'no-unused-vars': 'warn',

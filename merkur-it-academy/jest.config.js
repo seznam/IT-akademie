@@ -13,7 +13,22 @@ config.moduleNameMapper = {
 };
 config.modulePaths = [`${projectDir}/node_modules`];
 config.transform = {
-  '^.+\\.(t|j|cj|mj)sx?$': ['babel-jest', { configFile: './babel.config.js' }],
+  '^.+\\.(t|j|cj|mj)sx?$': [
+    'babel-jest',
+    {
+      presets: [
+        [
+          '@babel/preset-env',
+          {
+            targets: {
+              node: '16',
+            },
+          },
+        ],
+        ['@babel/preset-react', { pragma: 'h' }],
+      ],
+    },
+  ],
 };
 
 module.exports = {

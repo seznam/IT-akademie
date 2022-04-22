@@ -7,13 +7,7 @@ export default {
   component: Button,
   args: {
     children: 'Click me',
-  },
-  argTypes: {
-    primary: {
-      type: 'boolean',
-      defaultValue: 'false',
-      description: 'If the button has primary styling',
-    },
+    primary: false,
   },
   decorators: [
     (Story) => (
