@@ -1,0 +1,28 @@
+.m-text-button {
+  transition: 0.2s all;
+  display: inline-block;
+  color: #4263eb;
+  background: none;
+  border: none;
+  padding: 2px;
+  border-bottom: 1px solid;
+  border-color: transparent;
+  font-size: 16px;
+  cursor: pointer;
+
+  &:hover {
+    color: #748ffc;
+    border-color: #748ffc;
+  }
+
+  &:focus {
+    color: #3b5bdb;
+    outline: none;
+    border-color: #3b5bdb;
+  }
+
+  &[disabled] {
+    opacity: 0.75;
+    cursor: not-allowed;
+  }
+}

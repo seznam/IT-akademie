@@ -1,0 +1,9 @@
+{
+  "environment": "production",
+  "server": {
+    "clusters": 3
+  },
+  "widget": {
+    "authUrl": "https://api.github.com/"
+  }
+}
