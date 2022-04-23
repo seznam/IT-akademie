@@ -9,6 +9,9 @@ export default {
     children: 'Click me',
     primary: false,
   },
+  argTypes: {
+    onClick: 'action',
+  },
   decorators: [
     (Story) => (
       <div style={{ width: '10em' }}>
