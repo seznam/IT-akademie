@@ -1,0 +1,14 @@
+{
+  "watch": [
+    "server/*",
+    "build/*"
+  ],
+  "ignore": [
+    "*Spec.js",
+    "*Spec.jsx"
+  ],
+  "events": {
+    "restart": "merkur-tools livereload"
+  },
+  "ext": "cjs,ejs,json,mjs,js,jsx"
+}
