@@ -46,12 +46,12 @@ export default class UIComponentHelper {
 	}
 
 	/**
-	 * Returns intersecion of defined rects.
+	 * Returns intersection of defined rects.
 	 *
 	 * @method getRectsIntersection
 	 * @param {{top: number, left: number, width: number, height: number}} rect1
-	 * @param {{top: number, left: number, width: number, height: number}} react2
-	 * @return {{top: number, left: number, width: number, height: number}} The intersecion of rects.
+	 * @param {{top: number, left: number, width: number, height: number}} rect2
+	 * @return {{top: number, left: number, width: number, height: number}} The intersection of rects.
 	 */
 	getRectsIntersection(rect1, rect2) {
 		let top = this.getNumberFromRange(rect2.top, rect1.top, rect1.height);
@@ -191,7 +191,7 @@ export default class UIComponentHelper {
 	}
 
 	/**
-	 * Deregisters the provided event listener, so it will no longer we
+	 * Deregisters the provided event listener, so it will no longer be
 	 * executed when the specified event occurs on the specified event target.
 	 *
 	 * The method has no effect if the provided event listener is not
